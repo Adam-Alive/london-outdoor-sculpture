@@ -48,8 +48,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 ## User Stories
 
-### Epic 1
-### Authentication
+### Epic 1: Authentication
 
 - As a new user, I would like to create an account so that I can access all the features for signed-up users.
 - As a user, I would like to sign in so that I can access functionality for signed-in users.
@@ -57,23 +56,19 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a user, I would like to maintain my signed-in status until I choose to sign out so that my user experience is not interrupted.
 - As a user, I would like to sign out so that I know my session has been closed securely.
 
-### Epic 2
-### Navigation
+### Epic 2: Navigation
 
 - As a user, I would like to view a navbar from every page so that I can navigate seamlessly between pages.
 - As a signed-out user, I would like to see sign-in and sign-up options so that I can sign in/sign up.
 
-### Epic 3
-### Add and Like Posts
+### Epic 3: Add and Like Posts
 
 - As a logged-in user, I would like to create a post to share on the platform so that I can engage with other users.
 - As a logged-in user, I would like to edit my posts so that I can change or update them after their creation.
 - As a logged-in user, I would like to like/unlike a post so that I can show my appreciation of the content.
 - As a logged-in user, I would like to view all posts I have liked so that I can scroll through my favourite content.
 
-
-### Epic 4
-### View Posts
+### Epic 4: View Posts
 
 - As a user, I would like to scroll continuously through the posts on any given page so that I can view them without interruption.
 - As a user, I would like to view the most recent posts first so that I am up to date with the latest content.
@@ -81,9 +76,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a user, I would like to view the details of a single post so that I can learn more about it.
 - As a logged-in user, I would like to view posts filtered by users I follow so that I can keep up-to-date with their content.
 
-
-### Epic 5
-### Profiles
+### Epic 5: Profiles
 
 - As a user, I would like to view other users’ profiles so that I can see their posts and learn more about them.
 - As a user, I would like to view a list of the most followed profiles so that I can see which are the most popular.
@@ -93,9 +86,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a logged-in user, I would like to update my username/password so that I can make changes and keep my account secure.
 - As a user, I would like to see stats on a specific user’s profile so I can know how many posts they have made, followers they have, and how many users they are following.
 
-
-### Epic 6
-### Comments
+### Epic 6: Comments
 
 - As a user, I would like to view comments by other users so that I can know what they think about posts.
 - As a user, I would like to see how long ago a comment was made so that I know how old it is.
@@ -103,9 +94,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a logged-in user, I would like to edit any comment I have made so that I can update its content.
 - As a logged-in user, I would like to delete any comment I have made so that I can remove it from the site.
 
-
-### Epic 7
-### Online Talks
+### Epic 7: Online Talks
 
 - As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page.
 - As an administrator, I would like to edit an Online Talk event so that I can amend details if necessary.
@@ -114,13 +103,11 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a logged-in user, I would like to sign-up for an Online Talk so that I can receive a link for the event, attend, and engage with other users.
 - As a logged-in user, I would like to make suggestions for topics at future Online Talk events so that I can learn more about my areas of interest.
 
+### Epic 8: Site Administration
 
+- As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary.
+- As an administrator, I would like to create and manage content on the Online Talks page so that I can keep members informed of these events.
 
-
-### Site Administration
-
-- As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages.
-- As a site administrator, I would like to manage content on the Online Talks page so that I can keep members informed of other curling venues.
 
 ## Features
 
