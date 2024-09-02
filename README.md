@@ -48,13 +48,56 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 ## User Stories
 
-### New Users
-- As
+### Epic 1
+### Authentication
 
-### Site Members
-- As a 
+- As a new user, I would like to create an account so that I can access all the features for signed-up users.
+- As a user, I would like to sign in so that I can access functionality for signed-in users.
+- As a user, I would like to know if I am signed-in or not so that I can sign in if I necessary.
+- As a user, I would like to maintain my signed-in status until I choose to sign out so that my user experience is not interrupted.
+- As a user, I would like to sign out so that I know my session has been closed securely.
+
+### Epic 2
+### Navigation
+
+- As a user, I would like to view a navbar from every page so that I can navigate seamlessly between pages.
+- As a signed-out user, I would like to see sign-in and sign-up options so that I can sign in/sign up.
+
+### Epic 3
+### Add and Like Posts
+
+
+
+### Epic 4
+### View Posts
+
+
+
+### Epic 5
+### Profiles
+
+
+
+### Epic 6
+### Comments
+
+
+
+### Epic 7
+### Online Talks
+
+
+
+
 
 ### Site Administrator
+
+
+
+
+
+
+
 - As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages.
 - As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues.
 
