@@ -49,23 +49,13 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 ## User Stories
 
 ### New Users
-- As a new user, I would like to land on an informative and engaging home page so that I can learn about the club.
-- As a new user, I would like to submit my contact details so that I can register my membership.
+- As
 
 ### Site Members
-- As a member, I would like to enter my login details so that I can access the members' area.
-- As a member, I would like to logout so that I can know my session has been closed securely.
-- As a member, I would like to submit a question for display on the FAQs page.
-- As a member, I would like to book a practice session so that I can attend at a time that suits me.
-- As a member, I would like to amend or cancel a practice session so that I can change my plans.
-- As a member, I would like to know if the booking time I want is available so that I can make another choice if necessary.
-- As a member, I would like to add images to the gallery so that I can share my curling experiences with other members.
+- As a 
 
 ### Site Administrator
 - As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages.
-- As a site administrator, I would like to know when a new member has registered so that I can email them about their membership options.
-- As a site administrator, I would like to manage content on the FAQs page so that I can provide information to members.
-- As a site administrator, I would like to approve or delete images added to the gallery so that I can filter out any objectionable material.
 - As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues.
 
 ## Features
