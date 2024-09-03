@@ -94,7 +94,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a logged-in user, I would like to edit any comment I have made so that I can update its content.
 - As a logged-in user, I would like to delete any comment I have made so that I can remove it from the site.
 
-### Epic 7: Online Talks
+### Epic 7: Online Talk Events
 
 - As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page.
 - As an administrator, I would like to edit an Online Talk event so that I can amend details if necessary.
@@ -106,8 +106,6 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 ### Epic 8: Site Administration
 
 - As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary.
-- As an administrator, I would like to create and manage content on the Online Talks page so that I can keep members informed of these events.
-
 
 ## Features
 
