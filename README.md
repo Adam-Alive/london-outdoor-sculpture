@@ -263,7 +263,7 @@ erDiagram
 
 I began with a series of brainstorming sessions and then drew up a project plan which served as milestones for tracking on GitHub.
 
-![screenshot](documentation/milestones.png)
+![screenshot](documentation/images/milestones.png)
 
 ### GitHub Projects and Issues
 
