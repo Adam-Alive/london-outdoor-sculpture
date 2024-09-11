@@ -4,3 +4,11 @@
     font-size: large;
     font-weight: 600;
   }
+
+  .NavLink {
+    padding: 5px;
+  }
+  
+  .Active i {
+    color: #6c95ec;
+  }
