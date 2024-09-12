@@ -5,11 +5,8 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-// No image import for now
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -124,15 +121,6 @@ const SignUpForm = () => {
           </Link>
         </Container>
       </Col>
-      {/* <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
-        />
-      </Col> */}
     </Row>
   );
 };
