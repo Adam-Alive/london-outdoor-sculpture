@@ -14,14 +14,62 @@ import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 
 function PostCreateForm() {
-
   const [errors, setErrors] = useState({});
 
+  const [postData, setPostData] = useState({
+    title: "",
+    artist: "",
+    street: "",
+    postcode: "",
+    image: "",
+  });
+  const { title, artist, street, postcode, image } = postData;
+
+  const handleChange = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const textFields = (
     <div className="text-center">
-      {/* Add your form fields here */}
-
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Artist</Form.Label>
+        <Form.Control
+          type="text"
+          name="artist"
+          value={artist}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Street</Form.Label>
+        <Form.Control
+          type="text"
+          name="street"
+          value={street}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Postcode</Form.Label>
+        <Form.Control
+          type="text"
+          name="postcode"
+          value={postcode}
+          onChange={handleChange}
+        />
+      </Form.Group>
     
     
       <Button
