@@ -27,9 +27,10 @@ function PostCreateForm() {
     artist: "",
     street: "",
     postcode: "",
+    borough: "",
     image: "",
   });
-  const { title, artist, street, postcode, image } = postData;
+  const { title, artist, street, postcode, borough, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -59,6 +60,7 @@ function PostCreateForm() {
     formData.append("artist", artist);
     formData.append("street", street);
     formData.append("postcode", postcode);
+    formData.append("borough", borough);
     formData.append("image", imageInput.current.files[0]);
 
     try {
@@ -132,7 +134,22 @@ function PostCreateForm() {
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
-      ))} 
+      ))}
+
+      <Form.Group>
+        <Form.Label>Borough</Form.Label>
+        <Form.Control
+          type="text"
+          name="borough"
+          value={borough}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.borough?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
     
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
