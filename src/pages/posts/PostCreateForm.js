@@ -83,6 +83,12 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Artist</Form.Label>
         <Form.Control
@@ -92,6 +98,12 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.artist?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Street</Form.Label>
         <Form.Control
@@ -101,6 +113,12 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.street?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Postcode</Form.Label>
         <Form.Control
@@ -109,7 +127,12 @@ function PostCreateForm() {
           value={postcode}
           onChange={handleChange}
         />
-      </Form.Group>    
+      </Form.Group>
+      {errors?.postcode?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))} 
     
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
@@ -164,6 +187,12 @@ function PostCreateForm() {
                     ref={imageInput}
                 />               
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+            
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
