@@ -84,7 +84,7 @@ const Post = (props) => {
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {artist && <Card.Text>{artist}</Card.Text>}
-        {street && postcode && <Card.Text>{street}, {postcode}</Card.Text>}     
+        {street && postcode && <Card.Text>{street}, {postcode}</Card.Text>}   
         {borough && <Card.Text>{borough}</Card.Text>}
         <div className={styles.PostBar}>
           {is_owner ? (
