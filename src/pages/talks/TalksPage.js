@@ -17,31 +17,34 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 
 const TalksPage = () => {
+  
+  
+  
   return (   
     <Table striped bordered>
   <tbody>
     <tr>
-      <td>1</td>
-      <td>Mark</td>      
+      <td>Title</td>
+      <td></td>      
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
+      <td>Speaker</td>
+      <td></td>
       
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
+      <td>Date</td>
+      <td></td>
       
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
+      <td>Time</td>
+      <td></td>
       
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
+      <td>Summary</td>
+      <td></td>
       
     </tr>
   </tbody>
