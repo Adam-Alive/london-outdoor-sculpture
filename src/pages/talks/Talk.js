@@ -2,8 +2,6 @@ import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import Table from "react-bootstrap/Table";
-import styles from "../../styles/Post.module.css";
-import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -25,19 +23,36 @@ const Talk = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-    return (       
-    <Card className={styles.Talk}>   
-      <Card.Body>
-        <h1>Text from Talk.js</h1>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {speaker && <Card.Text>{speaker}</Card.Text>}
-        {date && <Card.Text>{date}</Card.Text>}   
-        {start_time && <Card.Text>{start_time}</Card.Text>}
-        {end_time && <Card.Text>{end_time}</Card.Text>}
-        {summary && <Card.Text>{summary}</Card.Text>}
-       
-      </Card.Body>
-    </Card>
+    return (
+      <Table striped bordered>
+            <tbody>
+              {title &&
+                <tr>
+                    <td>Title:</td>
+                    <td>{title}</td>
+                </tr>}
+              {speaker &&
+                <tr>
+                    <td>Speaker:</td>
+                    <td>{speaker}</td>
+                </tr>}
+              {date &&
+                <tr>
+                    <td>Date:</td>
+                    <td>{date}</td>
+                </tr>}
+              {start_time && end_time &&
+                <tr>
+                    <td>Time:</td>
+                    <td>{start_time} to {end_time}</td>
+                </tr>}
+              {summary && 
+                <tr>
+                    <td>Summary:</td>
+                    <td>{summary}</td>
+                </tr>}       
+              </tbody>
+        </Table>     
   );
 };
 

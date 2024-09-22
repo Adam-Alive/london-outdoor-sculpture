@@ -20,35 +20,7 @@ const TalksPage = () => {
   
   
   
-  return (   
-    <Table striped bordered>
-  <tbody>
-    <tr>
-      <td>Title</td>
-      <td></td>      
-    </tr>
-    <tr>
-      <td>Speaker</td>
-      <td></td>
-      
-    </tr>
-    <tr>
-      <td>Date</td>
-      <td></td>
-      
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td></td>
-      
-    </tr>
-    <tr>
-      <td>Summary</td>
-      <td></td>
-      
-    </tr>
-  </tbody>
-</Table>
+  return (    
 
   )
 }
