@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -17,11 +18,34 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 const TalksPage = () => {
   return (   
-    <Card>
-        Hello
-
-
-    </Card>
+    <Table striped bordered>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>      
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      
+    </tr>
+  </tbody>
+</Table>
 
   )
 }
