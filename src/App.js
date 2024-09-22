@@ -9,7 +9,7 @@ import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
-import Talk from "./pages/talks/Talk";
+import TalkPage from "./pages/talks/TalkPage";
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/posts/create" render={() => <PostCreateForm />} />
               <Route exact path="/posts/:id" render={() => <PostPage />} />
-              <Route exact path="/talks" render={() => <Talk />} />
+              <Route exact path="/talks/:id" render={() => <TalkPage />} />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>
