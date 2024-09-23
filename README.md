@@ -97,11 +97,10 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 ### Epic 7: Online Talk Events
 
 - As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page.
-- As an administrator, I would like to edit an Online Talk event so that I can amend details if necessary.
-- As an administrator, I would like to delete an Online Talk event so that I can remove cancelled events from the events page.
-- As a logged-in user, I would like to view all Online Talk events so that I can browse upcoming Online Talks.
-- As a logged-in user, I would like to sign-up for an Online Talk so that I can receive a link for the event, attend, and engage with other users.
-- As a logged-in user, I would like to make suggestions for topics at future Online Talk events so that I can learn more about my areas of interest.
+- As an administrator, I would like to edit and delete an Online Talk event so that I can amend details and remove the event if necessary.
+- As a user, I would like to view all Online Talk events so that I can browse upcoming Online Talks.
+- As a logged-in user, I would like to submit a booking for an Online Talk event so that I can attend and engage with other users.
+- As a logged-in user, I would like to view, edit and delete my bookings for Online Talk events so that I can check and change my bookings if necessary.
 
 ### Epic 8: Site Administration
 
