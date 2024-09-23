@@ -12,6 +12,10 @@ import Comment from "../comments/Comment";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
@@ -44,25 +48,31 @@ function PostPage() {
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
-              <CommentCreateForm
-                profile_id={currentUser.profile_id}
-                profileImage={profile_image}
-                post={id}
-                setPost={setPost}
-                setComments={setComments}
-              />
-            ) : comments.results.length ? (
+            <CommentCreateForm
+              profile_id={currentUser.profile_id}
+              profileImage={profile_image}
+              post={id}
+              setPost={setPost}
+              setComments={setComments}
+            />
+          ) : comments.results.length ? (
               "Comments"
-            ) : null}
+          ) : null}
             {comments.results.length ? (
-              comments.results.map((comment) => (              
-                <Comment 
-                key={comment.id} 
-                {...comment}
-                setPost={setPost}
-                setComments={setComments}
-               />
-              ))
+              <InfiniteScroll
+                children={comments.results.map((comment) => (
+                  <Comment
+                    key={comment.id}
+                    {...comment}
+                    setPost={setPost}
+                    setComments={setComments}
+                  />
+                ))}
+                dataLength={comments.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!comments.next}
+                next={() => fetchMoreData(comments, setComments)}
+              />
             ) : currentUser ? (
               <span>No comments yet, be the first to comment!</span>
             ) : (
