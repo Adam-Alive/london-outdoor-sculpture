@@ -32,5 +32,19 @@ export const followHelper = (profile, clickedProfile, following_id) => {
       profile;
 };
 
-
-
+// Get follower count.
+// Decrement count by 1 with unfollow.
+export const unfollowHelper = (profile, clickedProfile) => {
+  return profile.id === clickedProfile.id
+    ? 
+      {
+        ...profile,
+        followers_count: profile.followers_count - 1,
+        following_id: null,
+      }
+    : profile.is_owner
+    ? 
+      { ...profile, following_count: profile.following_count - 1 }
+    : 
+      profile;
+};
