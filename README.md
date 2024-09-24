@@ -53,7 +53,6 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As a new user, I would like to create an account so that I can access all the features for signed-up users.
 - As a user, I would like to sign in so that I can access functionality for signed-in users.
 - As a user, I would like to know if I am signed-in or not so that I can sign in if I necessary.
-- As a user, I would like to maintain my signed-in status until I choose to sign out so that my user experience is not interrupted.
 - As a user, I would like to sign out so that I know my session has been closed securely.
 
 ### Epic 2: Navigation
@@ -198,15 +197,18 @@ The following features would add to the user experience:
 ## Database Design
 
 ### Models
-In designing the database I developed four models, in addition to Django's User model:
+The database is comprised of eight models, including Django's User model:
 - User (Django)
 - Booking
-- GalleryImage
-- Faqs
-- Network
+- Comment
+- Follower
+- Like
+- Post
+- Profile
+- Talk
 
 ### Entity Relationship Diagrams (ERDs)
-I then constructed an ERD in Excel for each model:
+An ERD for each model is shown here:
 
 ![screenshot](documentation/erd.png)
 
