@@ -10,6 +10,7 @@ import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
+import ProfilePage from "./pages/profiles/ProfilePage";
 import TalkPage from "./pages/talks/TalkPage";
 import BookingCreateForm from "./pages/bookings/BookingCreateForm";
 
@@ -43,6 +44,7 @@ function App() {
               <Route exact path="/posts/create" render={() => <PostCreateForm />} />
               <Route exact path="/posts/:id" render={() => <PostPage />} />
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+              <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
               <Route exact path="/talks/:id" render={() => <TalkPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
