@@ -17,7 +17,6 @@ export const fetchMoreData = async (resource, setResource) => {
 
 // Get follower count.
 // Increment count by 1 with new follow.
-
 export const followHelper = (profile, clickedProfile, following_id) => {
   return profile.id === clickedProfile.id
     ? 
