@@ -13,6 +13,7 @@ import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import TalkPage from "./pages/talks/TalkPage";
 import BookingCreateForm from "./pages/bookings/BookingCreateForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               <Route exact path="/posts/:id" render={() => <PostPage />} />
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+              <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
               <Route exact path="/talks/:id" render={() => <TalkPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
