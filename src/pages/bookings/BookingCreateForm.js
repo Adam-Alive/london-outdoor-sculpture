@@ -49,6 +49,9 @@ function BookingCreateForm() {
     formData.append("questions", questions);
     formData.append("suggestions", suggestions);    
 
+
+    // In code below, do I need to include axiosReq.get(`/talks/${id}`) to
+    // access the talk title  ??
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
       history.push(`/bookings/${data.id}`);
