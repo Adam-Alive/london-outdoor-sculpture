@@ -15,6 +15,7 @@ import TalkPage from "./pages/talks/TalkPage";
 import BookingCreateForm from "./pages/bookings/BookingCreateForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 
 
 function App() {
@@ -48,7 +49,8 @@ function App() {
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
               <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
-              <Route   exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
+              <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
+              <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
               <Route exact path="/talks/:id" render={() => <TalkPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
