@@ -1,4 +1,4 @@
-# [London Outdoor Sculpture](https://herokuapp.com)
+# [London Outdoor Sculpture] (https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/)
 
 ## Project Purpose
 
@@ -23,7 +23,7 @@ There are two target groups:
 ## UX
 ### Initial Design and Wireframes
 
-Content will be centred. I present here the primary wireframes for all pages on small screens with relevant samples for larger screens: : [WIREFRAMES.md](WIREFRAMES.md).
+I present here the primary wireframes for all pages on small screens with relevant samples for larger screens: : [WIREFRAMES.md](WIREFRAMES.md).
 
 ### Colour Scheme
 
@@ -111,68 +111,64 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 - **Home Page - Public**
     
-    - The home page displays the club name in the header along with a navbar to login or register. Three images support clear and engaging text outlining club activities and membership opportunities.
+    - The home page displays posts... 
 
-![screenshot](documentation/features/home-non-member.png)
+![screenshot](documentation/features/.png)
 
-- **Home Page - Members**
+- **Home Page - Logged-in Users**
 
-    - A message confirms that the member has logged in successfully and the navbar shows the page options.
+    - The navbar shows the page options.
 
-![screenshot](documentation/features/home-logged-in.png)
+![screenshot](documentation/features/.png)
 
-- **Bookings Page**
+- **Posts Page**
 
-    - Members are given clear instructions about the booking process and can submit their booking request via an online form.
+    - Posts.
 
-![screenshot](documentation/features/bookings.png)
+![screenshot](documentation/features/.png)
+
+- **Profile Page**
+    - Profiles...
+
+![screenshot](documentation/features/.png)
+
+- **Feed Page**
+    - Posts of users followed...
+
+![screenshot](documentation/features/.png)
+
+- **Liked Page**
+    - Liked posts...
+
+![screenshot](documentation/features/.png)
+
+- **Talks Page**
+
+    - Talks list...
+
+![screenshot](documentation/features/.png)
 
 - **My Bookings Page**
-    - Members can view their current bookings in ascending order of booking date. An Edit and Cancel button allow a booking to be amended or cancelled.
 
-![screenshot](documentation/features/bookings-my-bookings.png)
+    - Bookings...
 
-- **FAQs Page**
+![screenshot](documentation/features/.png)
 
-    - A list of commonly asked questions for new members. This page can be updated through the admin panel
+- **Confirm Sign out**
 
-![screenshot](documentation/features/faqs.png)
+    - When a user signs out they are first asked to confirm this action and are then given an onscreen message confirming that they have signed out.
 
-- **Gallery Page**
-
-    - Members can upload their curling images and include a caption. Once submitted, the image is sent for approval by the site administrator and then displayed for all members to see along with the caption and date added/updated. Larger screens display images in rows of up to three columns, tablets two and mobiles one.
-
-![screenshot](documentation/features/gallery-upload.png)
-![screenshot](documentation/features/gallery-ipad.png)
-![screenshot](documentation/features/gallery-sm-screen.png)
-
-- **My Pictures Page**
-
-- Members can view their own uploaded images , edit the caption or delete the image. As above, any edited caption will require approval by the site administrator before display to all.
-
-![screenshot](documentation/features/gallery-my-pictures.png)
-
-- **Network Page**
-
-    - Members can access information about other curling clubs across the UK. This page can be updated through the admin panel. Please note that, since all clubs are fictional, for each website I have added a link to the British Curling Association for demonstration purposes.
-
-![screenshot](documentation/features/network.png)
-
-- **Confirm Logout**
-
-    - When a member logs out they are first asked to confirm this action and are then given an onscreen message confirming that they have logged out.
-
-![screenshot](documentation/features/logout-1.png)
-![screenshot](documentation/features/logout-2.png)
+![screenshot](documentation/features/.png)
+![screenshot](documentation/features/.png)
 
 ### Future Features
 The following features would add to the user experience:
 
-- Membership Approval & Confirmation
-    - A new user will be required to submit additional membership details   via an online form. They will receive an automated email after submission and the site administrator will also receive an automated email giving notice of this application so they can approve membership.
+- xxx
+    - yyy
 
-- Enhanced Booking System
-    - The bookings system will ensure that double-bookings are avoided by cross-checking bookings and displaying an onscreen message if a time-slot is unavailable.
+- xxx
+    - zzz
 
 ## Tools & Technologies Used
 
@@ -266,11 +262,11 @@ I began with a series of brainstorming sessions and then drew up a project plan 
 
 ### GitHub Projects and Issues
 
-[GitHub Projects](https://github.com/Adam-Alive/camden-curling-club/projects) served as an Agile tool for this project where epics, user stories, issues, and milestones were planned and then tracked on the Kanban board.
+[GitHub Projects](https://github.com/Adam-Alive/london-outdoor-sculpture/projects?query=is%3Aopen) served as an Agile tool for this project where epics, user stories, issues, and milestones were planned and then tracked on the Kanban board.
 
 Using GitHub's projects and issues framework I created two GitHub projects within the repository, and then developed issues within each:
-- [Curling Club User Stories](https://github.com/users/Adam-Alive/projects/6)
-- [Curling Club Development and Testing](https://github.com/users/Adam-Alive/projects/8)
+- [Sculpture Development and Testing](https://github.com/users/Adam-Alive/projects/10)
+- [Sculpture User Stories](https://github.com/users/Adam-Alive/projects/9)
 
 I created a **User Story Template** to manage user stories and provide here an example of a completed issue:
 
