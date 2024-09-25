@@ -200,10 +200,10 @@ function PostCreateForm() {
                 )}
 
                 <Form.File
-                    id="image-upload"
-                    accept="image/*"
-                    onChange={handleChangeImage}
-                    ref={imageInput}
+                  id="image-upload"
+                  accept="image/*"
+                  onChange={handleChangeImage}
+                  ref={imageInput}
                 />               
             </Form.Group>
             {errors?.image?.map((message, idx) => (
