@@ -1,0 +1,9 @@
+.Content {
+    text-align: left;
+}
+
+.Content h2 {    
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 600;
+}
