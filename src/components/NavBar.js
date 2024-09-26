@@ -30,6 +30,7 @@ const NavBar = () => {
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
+      aria-label="Add image"
       to="/posts/create"
     >
       <i className="far fa-plus-square"></i>Add image
@@ -40,6 +41,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
+        aria-label="Feed"
         to="/feed"
       >
         <i className="fas fa-stream"></i>Feed
@@ -47,15 +49,21 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
+        aria-label="Liked"
         to="/liked"
       >
         <i className="fas fa-heart"></i>Liked
       </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+      <NavLink 
+        className={styles.NavLink}
+        aria-label="Sign out"
+        to="/" 
+        onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
       <NavLink
         className={styles.NavLink}
+        aria-label="Profile"
         to={`/profiles/${currentUser?.profile_id}`}
       >
         <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
@@ -67,14 +75,16 @@ const NavBar = () => {
       <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
+      aria-label="Sign in"
       to="/signin"
     >
       <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
       <NavLink
-        to="/signup"
         className={styles.NavLink}
         activeClassName={styles.Active}
+        aria-label="Sign up"
+        to="/signup"        
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
@@ -97,6 +107,7 @@ const NavBar = () => {
               exact
               className={styles.NavLink}
               activeClassName={styles.Active}
+              aria-label="home page"
               to="/"
             >
               <i className="fas fa-home"></i>Home
