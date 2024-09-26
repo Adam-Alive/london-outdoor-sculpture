@@ -53,6 +53,7 @@ function App() {
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
               <Route exact path="/talks/:id" render={() => <TalkPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
+              {/* <Route exact path="/about/" render={() => <About /> } /> */}
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>

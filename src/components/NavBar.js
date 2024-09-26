@@ -41,6 +41,15 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
+        aria-label="Bookings"
+        to="/bookings"
+      >
+        <i className="fa-solid fa-hand"></i>Bookings
+      </NavLink>
+      
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
         aria-label="Feed"
         to="/feed"
       >
@@ -107,11 +116,26 @@ const NavBar = () => {
               exact
               className={styles.NavLink}
               activeClassName={styles.Active}
-              aria-label="home page"
+              aria-label="Home page"
               to="/"
             >
               <i className="fas fa-home"></i>Home
-            </NavLink>         
+            </NavLink>
+            <NavLink
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              aria-label="About page"              
+              to="/about">
+              <i className="fa-brands fa-readme"></i>About
+            </NavLink>
+            <NavLink
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              aria-label="Talks page"              
+              to="/talks">
+              <i className="fa-solid fa-person-chalkboard"></i>Talks
+            </NavLink>
+
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
