@@ -11,7 +11,6 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
-import TalkPage from "./pages/talks/TalkPage";
 import TalksPage from "./pages/talks/TalksPage";
 import BookingCreateForm from "./pages/bookings/BookingCreateForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -52,8 +51,7 @@ function App() {
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
               <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
               <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
-              <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
-              {/* <Route exact path="/talks/:id" render={() => <TalkPage />} /> */}
+              <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />      
               <Route exact path="/talks/" render={() => <TalksPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
               <Route exact path="/about/" render={() => <About /> } />

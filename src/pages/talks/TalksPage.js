@@ -9,7 +9,6 @@ import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/TalksPage.module.css";
 
-import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Talk from "./Talk";
 import NoResults from "../../assets/no-results.png";
@@ -34,33 +33,30 @@ function TalksPage() {
   }, []);
   
 
-return (
-  <Row className="h-100">
-    <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <p>Popular profiles mobile</p>
-      {hasLoaded ? (
-        <>
-          {talks.results.length ? (
-            talks.results.map((talk) => (
-              <Talk key={talk.id} {...talk} setTalks={setTalks} />
-            ))
-          ) : (
-            <Container className={appStyles.Content}>
-              <Asset src={NoResults} />
-            </Container>
-          )}
-        </>
-      ) : (
-        <Container className={appStyles.Content}>
-          <Asset spinner />
-        </Container>
-      )}
-    </Col>
-    <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-      <p>Popular profiles for desktop</p>
-    </Col>
-  </Row>
-   );
-  }
+  return (
+    <Container ClassName={styles}>
+      <h3>Online Talks</h3>
+      <br />
+      <h5>All are welcome to join our monthly online talks with guest speakers covering...</h5>
+        {hasLoaded ? (
+          <>
+            {talks.results.length ? (
+              talks.results.map((talk) => (
+                <Talk key={talk.id} {...talk} setTalks={setTalks} />
+              ))
+            ) : (
+              <Container className={appStyles.Content}>
+                <Asset src={NoResults} />
+              </Container>
+            )}
+          </>
+        ) : (
+          <Container className={appStyles.Content}>
+            <Asset spinner />
+          </Container>
+        )}  
+    </Container>
+  );
+}
 
 export default TalksPage

@@ -3,8 +3,6 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { Container } from "react-bootstrap";
 
