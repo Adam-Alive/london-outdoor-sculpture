@@ -2,9 +2,13 @@
     text-align: left;
 }
 
-.Content h3 {    
+h3 {    
     margin-top: 40px;
     font-weight: 600;
+}
+
+h4, h5 {
+    padding-bottom: 20px;
 }
 
 .Borough {
@@ -12,6 +16,3 @@
     font-weight: 600;
 }
 
-h4, h5 {
-    padding-bottom: 10px;
-}

@@ -34,10 +34,11 @@ function TalksPage() {
   
 
   return (
-    <Container ClassName={styles}>
+    <Container ClassName={styles.Any}>
       <h3>Online Talks</h3>
       <br />
-      <h5>All are welcome to join our monthly online talks with guest speakers covering...</h5>
+      <h5>All are welcome to join our monthly online talks with guest speakers covering the many themes relating to public sculpture across London.</h5>
+      <h5>Please sign-up to register for any talk.</h5>
         {hasLoaded ? (
           <>
             {talks.results.length ? (
