@@ -1,10 +1,13 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Link } from "react-router-dom";
 
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import btnStyles from "../../styles/Button.module.css"
+
 import { axiosRes } from "../../api/axiosDefaults";
-import { Container } from "react-bootstrap";
 
 // Talks are created by an administrator in the API admin panel.
 
@@ -55,10 +58,17 @@ const Talk = (props) => {
                       <td>{summary}</td>
                   </tr>}       
                 </tbody>
-          </Table>        
-          <Button variant="primary">Register</Button>
-        </Container>
-  );
-};
+          </Table>
+          <Container>
+            <Link to="/bookings/create">
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`}>
+                Register
+            </Button>
+            </Link>
+          </Container>         
+      </Container>
+    );
+  };
 
 export default Talk;
+

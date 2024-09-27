@@ -96,8 +96,8 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           placeholder="Enter email address"
-          name="talk"
-          value={talk}
+          name="email"
+          value={email}
           onChange={handleChange}
         />
       </Form.Group>
