@@ -61,7 +61,7 @@ const Talk = (props) => {
           </Table>
           <Container>
             <Link to="/bookings/create">
-            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Register
             </Button>
             </Link>
