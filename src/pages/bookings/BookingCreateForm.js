@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -19,12 +19,11 @@ function BookingCreateForm() {
     talk: "",
     name: "",
     email: "",
-    questions: '',
-    suggestions: '',  
+    questions: "",
+    suggestions: "",
   });
   const { talk, name, email, questions, suggestions } = bookingData;
 
-//   const imageInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
