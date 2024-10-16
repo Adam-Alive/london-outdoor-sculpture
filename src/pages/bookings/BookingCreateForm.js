@@ -131,14 +131,14 @@ function BookingCreateForm() {
         />
       </Form.Group>    
 
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+        Submit
+      </Button>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        cancel
-      </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+        Cancel
       </Button>
     </div>
   );
