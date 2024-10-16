@@ -32,7 +32,7 @@ function TalksPage() {
   
 
   return (
-    <Container ClassName={styles.Any}>
+    <Container ClassName={styles.Content}>
       <h3>Online Talks</h3>
       <br />
       <h5>All are welcome to join our monthly online talks with guest speakers covering the many themes relating to public sculpture across London.</h5>

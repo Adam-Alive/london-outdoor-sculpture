@@ -1,8 +1,13 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
+import styles from "../../styles/Bookings.module.css";
 
 const Bookings = () => {
   return (
-    <div>Bookings</div>
+    <Container className={styles.Content}>
+    <h3>My Bookings</h3>
+    <br />
+    </Container>
   )
 }
 
