@@ -1,3 +1,5 @@
+// Adapt BookingCreateForm - TBC
+
 import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
@@ -12,7 +14,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function BookingCreateForm() {
+function BookingEditForm() {
   const [errors, setErrors] = useState({});
 
   const [bookingData, setBookingData] = useState({
@@ -145,4 +147,4 @@ function BookingCreateForm() {
   );
 }
 
-export default BookingCreateForm;
+export default BookingEditForm;
