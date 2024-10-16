@@ -10,7 +10,7 @@ import Alert from "react-bootstrap/Alert";
 import Asset from "../../components/Asset";
 import Upload from "../../assets/upload.png";
 
-// import styles from "../../styles/BookingCreateEditForm.module.css"
+import styles from "../../styles/BookingCreateEditForm.module.css"
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
@@ -145,7 +145,7 @@ function BookingCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>   
-      <Container className= {appStyles.Content}>{textFields}</Container>    
+      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>{textFields}</Container>    
     </Form>
   );
 }
