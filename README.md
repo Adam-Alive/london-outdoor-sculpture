@@ -4,7 +4,7 @@
 
 The purpose of this project is to create a photo-sharing website for images of outdoor sculpture across the Greater London area.
 
-Once registered, users will be able to post images, like and comment upon posts, follow other users and sign-up for online events.
+Once registered, users will be able to post images, like and comment upon posts, follow other users and sign-up for online talks.
 
 The site administrator will be able to monitor and modify all aspects of the site including the deletion of posts, comments and users if necessary.
 
@@ -35,16 +35,15 @@ Black, blue and green text were chosen to provide variety and a clear contrast w
 
 I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator to select colours, and their use is summarised below:
 
-- `rgb(10, 13, 17)` used for primary text.
-- `rgb(173, 187, 250)` used for header, footer and primary buttons.
-- `rgb(238, 129, 205)` used for onscreen messages, button-hover and secondary buttons.
-- `rgb(0, 0, 255)` and `rgb(0, 128, 0)` for text on FAQs and Network pages for contrast.
+- `rgb()` used for primary text.
+- `rgb()` used for header, footer and primary buttons.
+- `rgb()` used for onscreen messages, button-hover and secondary buttons.
 
 ### Typography
 
 - [Montserrat](https://fonts.google.com/specimen/Montserrat) is used for all text.
 
-- [Font Awesome](https://fontawesome.com) is used for the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) is used for icons in the nav bar.
 
 ## User Stories
 
@@ -179,80 +178,21 @@ The following features would add to the user experience:
 - [Gitpod](https://gitpod.io) as a cloud-based IDE for development.
 - [HTML](https://en.wikipedia.org/wiki/HTML) for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) for the main site design and layout.
-- [JavaScript](https://www.javascript.com) for user interaction on the site.
+- [React](https://react.dev/) for front-end user interface.
 - [Python](https://www.python.org) for back-end programming.
 - [Heroku](https://www.heroku.com) for hosting the deployed back-end site.
-- [Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3) for the front-end CSS framework with modern responsiveness and pre-built components.
+- [React Bootstrap](https://react-bootstrap.netlify.app/) for the front-end CSS styling.
 - [Django](https://www.djangoproject.com) as the Python framework for the site.
 - [PostgreSQL](https://www.postgresql.org) for relational database management.
-- [Neon](https://neon.tech/) to host the PostgreSQL database.
+- [Code Institute PostgreSQL](https://dbs.ci-dbs.net/) to host the PostgreSQL database.
 - [Cloudinary](https://cloudinary.com) for online static file storage.
-- [WhiteNoise](https://whitenoise.readthedocs.io) for serving static files with Heroku.
 - [Font Awesome](https://fontawesome.com) for icons.
 - [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the completed project.
 
 ## Database Design
 
-### Models
-The database is comprised of eight models, including Django's User model:
-- User (Django)
-- Booking
-- Comment
-- Follower
-- Like
-- Post
-- Profile
-- Talk
+See back-end API README: [Database Design](https://github.com/Adam-Alive/sculpture-drf-api?tab=readme-ov-file#database-design)
 
-### Entity Relationship Diagrams (ERDs)
-An ERD for each model is shown here:
-
-![screenshot](documentation/erd.png)
-
-At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to auto-generate ERDs for the final project:
-
-```mermaid
-erDiagram
-    User {
-        int id
-        string username
-        string password
-        string email
-    }
-
-    Booking {
-        int id
-        date date
-        string sheet_time
-        string wheelchair_sheet
-    }
-    Booking }o--|| User : "username"
-
-    Faq {
-        int id
-        text question
-        text answer
-    }
-
-    GalleryImage {
-        int id
-        string gallery_image
-        string caption
-        datetime added_on
-        datetime caption_updated_on
-        boolean approved
-    }
-    GalleryImage }o--|| User : "username (author)"
-
-    Network {
-        int id
-        string club_name
-        string location
-        string website
-        string email
-        string wheelchair_access
-    }
-```
 ## Agile Project Management
 
 ### Project Plan and Milestones
@@ -290,7 +230,7 @@ I also used the MoSCow prioritisation model to add labels to my user stories wit
 - **Must Have**: guaranteed to be delivered.
 - **Should Have**: adds significant value, but not vital.
 - **Could Have**: has small impact if left out.
-- **Won't Have**: not a priority for this iteration.
+- **Won't Have**: not a priority for this iteration (and not included for the purposes of this project).
 
 **A summary of open and closed issues can be accessed via these tabs:**
 
@@ -306,11 +246,11 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 **IMPORTANT:**
 
-The live application is deployed on Heroku at: [Heroku](https://camden-curling-club-286959c89917.herokuapp.com).
+The live application is deployed on Heroku at: [Heroku](https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/).
 
 ### PostgreSQL Database
 
-This project uses a PostgreSQL database at [Neon](https://neon.tech/).
+This project uses a PostgreSQL database at [Code Institute](https://dbs.ci-dbs.net/).
 
 ### Cloudinary API
 
