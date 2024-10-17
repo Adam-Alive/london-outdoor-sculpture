@@ -106,6 +106,7 @@ const NavBar = () => {
         <NavLink to="/">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="80" />
+            {/* <h4 className="d-none d-md-inline p-3">London Outdoor Sculpture</h4> */}
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
