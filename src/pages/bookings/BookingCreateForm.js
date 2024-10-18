@@ -11,9 +11,11 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function BookingCreateForm() {
   const [errors, setErrors] = useState({});
+  useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
     talk: "",
