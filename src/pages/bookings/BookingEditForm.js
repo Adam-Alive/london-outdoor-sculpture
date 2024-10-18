@@ -1,5 +1,3 @@
-// Adapt BookingCreateForm - TBC
-
 import React, {useState } from "react";
 
 import Form from "react-bootstrap/Form";
@@ -11,18 +9,24 @@ import styles from "../../styles/BookingCreateEditForm.module.css"
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
+
 
 function BookingEditForm() {
+
+  const location = useLocation()
+
   const [errors, setErrors] = useState({});
+  useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
-    talk: "",
+    talk: location.state?.title,
     name: "",
     email: "",
-    questions: '',
-    suggestions: '',  
+    questions: "",
+    suggestions: "",
   });
   const { talk, name, email, questions, suggestions } = bookingData;
 
@@ -45,9 +49,14 @@ function BookingEditForm() {
     formData.append("questions", questions);
     formData.append("suggestions", suggestions);
 
+    // Delete after REQUEST is successful
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
     
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
+      console.log(data)
       history.push(`/bookings/${data.id}`);
     } catch (err) {
       console.log(err);
@@ -66,6 +75,7 @@ function BookingEditForm() {
           name="talk"
           value={talk}
           onChange={handleChange}
+          disabled
         />
       </Form.Group>
 
@@ -125,21 +135,26 @@ function BookingEditForm() {
         />
       </Form.Group>    
 
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        Submit
+      <Button 
+        className={`${btnStyles.Button} ${btnStyles.Blue}`} 
+        type="submit"
+      >
+        Edit
       </Button>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        Cancel
+        Delete
       </Button>
     </div>
   );
 
   return (
     <Form onSubmit={handleSubmit}>   
-      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>{textFields}</Container>    
+      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>
+      {textFields}
+      </Container>
     </Form>
   );
 }
