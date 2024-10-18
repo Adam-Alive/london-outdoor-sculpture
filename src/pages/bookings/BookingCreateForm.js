@@ -141,7 +141,7 @@ function BookingCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>   
-      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>{textFields}</Container>    
+      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>{textFields}</Container>
     </Form>
   );
 }

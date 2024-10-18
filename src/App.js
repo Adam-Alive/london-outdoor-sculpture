@@ -56,7 +56,7 @@ function App() {
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />      
               <Route exact path="/talks/" render={() => <TalksPage />} />
               <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
-              <Route exact path="/bookings/" render={() => <Bookings />} />
+              <Route exact path="/bookings/:id" render={() => <Bookings />} />
               <Route exact path="/bookings/edit" render={() => <BookingEditForm />} />
               <Route exact path="/about/" render={() => <About /> } />
               <Route render={() => <p>Page not found!</p>} />
