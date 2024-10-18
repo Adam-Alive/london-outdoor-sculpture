@@ -15,7 +15,6 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 function BookingCreateForm() {
 
-  // https://www.daggala.com/passing-props-through-link-in-react-router/
   const location = useLocation()
 
   const [errors, setErrors] = useState({});
@@ -28,7 +27,7 @@ function BookingCreateForm() {
     questions: "",
     suggestions: "",
   });
-  // const { talk, name, email, questions, suggestions } = bookingData;
+  const { talk, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -43,15 +42,13 @@ function BookingCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    // owner is missing
-    formData.append("owner", "Testing123")
-    formData.append("talk", bookingData.talk);
-    formData.append("name", bookingData.name);
-    formData.append("email", bookingData.email);
-    formData.append("questions", bookingData.questions);
-    formData.append("suggestions", bookingData.suggestions);    
+    formData.append("talk", talk);
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("questions", questions);
+    formData.append("suggestions", suggestions);
 
-    // Delete this after your REQUEST is successful
+    // Delete after REQUEST is successful
     for (let [key, value] of formData.entries()) {
       console.log(key, value);
     }
@@ -59,7 +56,7 @@ function BookingCreateForm() {
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
       console.log(data)
-      // history.push(`/bookings/${data.id}`);
+      history.push(`/bookings/${data.id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -75,7 +72,7 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={bookingData.talk}
+          value={talk}
           onChange={handleChange}
           disabled
         />
@@ -87,7 +84,7 @@ function BookingCreateForm() {
           type="text"
           placeholder="Enter name"
           name="name"
-          value={bookingData.name}
+          value={name}
           onChange={handleChange}
         />
       </Form.Group>
@@ -103,7 +100,7 @@ function BookingCreateForm() {
           type="text"
           placeholder="Enter email address"
           name="email"
-          value={bookingData.email}
+          value={email}
           onChange={handleChange}
         />
       </Form.Group>
@@ -120,7 +117,7 @@ function BookingCreateForm() {
           placeholder="Optional"
           rows={6}
           name="questions"
-          value={bookingData.questions}
+          value={questions}
           onChange={handleChange}
         />
       </Form.Group>
@@ -132,7 +129,7 @@ function BookingCreateForm() {
           placeholder="Optional"
           rows={6}
           name="suggestions"
-          value={bookingData.suggestions}
+          value={suggestions}
           onChange={handleChange}
         />
       </Form.Group>    
@@ -154,7 +151,9 @@ function BookingCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>   
-      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>{textFields}</Container>
+      <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>
+      {textFields}
+      </Container>
     </Form>
   );
 }

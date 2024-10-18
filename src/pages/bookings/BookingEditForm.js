@@ -1,6 +1,6 @@
 // Adapt BookingCreateForm - TBC
 
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -26,7 +26,6 @@ function BookingEditForm() {
   });
   const { talk, name, email, questions, suggestions } = bookingData;
 
-//   const imageInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -44,11 +43,9 @@ function BookingEditForm() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);
-    formData.append("suggestions", suggestions);    
+    formData.append("suggestions", suggestions);
 
-
-    // In code below, do I need to include axiosReq.get(`/talks/${id}`) to
-    // access the talk title  ??
+    
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
       history.push(`/bookings/${data.id}`);
