@@ -34,7 +34,7 @@ function TalksPage() {
 // when the user clicks on 'Register'
 
   return (
-    <Container ClassName={styles.Content}>
+    <Container className={styles.Content}>
       <h3>Online Talks</h3>
       <br />
       <h5>All are welcome to join our monthly online talks with guest speakers covering the many themes relating to public sculpture across London.</h5>
