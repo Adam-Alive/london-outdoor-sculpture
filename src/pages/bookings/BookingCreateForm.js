@@ -9,22 +9,26 @@ import styles from "../../styles/BookingCreateEditForm.module.css"
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
 function BookingCreateForm() {
+
+  // https://www.daggala.com/passing-props-through-link-in-react-router/
+  const location = useLocation()
+
   const [errors, setErrors] = useState({});
   useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
-    talk: "",
+    talk: location.state?.title,
     name: "",
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, name, email, questions, suggestions } = bookingData;
+  // const { talk, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -39,18 +43,23 @@ function BookingCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("talk", talk);
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("questions", questions);
-    formData.append("suggestions", suggestions);    
+    // owner is missing
+    formData.append("owner", "Testing123")
+    formData.append("talk", bookingData.talk);
+    formData.append("name", bookingData.name);
+    formData.append("email", bookingData.email);
+    formData.append("questions", bookingData.questions);
+    formData.append("suggestions", bookingData.suggestions);    
 
-
-    // In code below, do I need to include axiosReq.get(`/talks/${id}`) to
-    // access the talk title  ??
+    // Delete this after your REQUEST is successful
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
+    
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
-      history.push(`/bookings/${data.id}`);
+      console.log(data)
+      // history.push(`/bookings/${data.id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -66,8 +75,9 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={bookingData.talk}
           onChange={handleChange}
+          disabled
         />
       </Form.Group>
 
@@ -77,7 +87,7 @@ function BookingCreateForm() {
           type="text"
           placeholder="Enter name"
           name="name"
-          value={name}
+          value={bookingData.name}
           onChange={handleChange}
         />
       </Form.Group>
@@ -93,7 +103,7 @@ function BookingCreateForm() {
           type="text"
           placeholder="Enter email address"
           name="email"
-          value={email}
+          value={bookingData.email}
           onChange={handleChange}
         />
       </Form.Group>
@@ -110,7 +120,7 @@ function BookingCreateForm() {
           placeholder="Optional"
           rows={6}
           name="questions"
-          value={questions}
+          value={bookingData.questions}
           onChange={handleChange}
         />
       </Form.Group>
@@ -122,12 +132,15 @@ function BookingCreateForm() {
           placeholder="Optional"
           rows={6}
           name="suggestions"
-          value={suggestions}
+          value={bookingData.suggestions}
           onChange={handleChange}
         />
       </Form.Group>    
 
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button 
+        className={`${btnStyles.Button} ${btnStyles.Blue}`} 
+        type="submit"
+      >
         Submit
       </Button>
       <Button

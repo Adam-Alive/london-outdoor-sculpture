@@ -60,7 +60,12 @@ const Talk = (props) => {
                 </tbody>
           </Table>
           <Container>
-            <Link to="/bookings/create">
+            <Link to={{
+              pathname: "/bookings/create", 
+              state: {
+                title: title,
+              }
+            }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Register
             </Button>
