@@ -7,22 +7,17 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import btnStyles from "../../styles/Button.module.css"
 
-import { axiosRes } from "../../api/axiosDefaults";
-
 // Talks are created by an administrator in the API admin panel.
 
 const Talk = (props) => {
   const {
-    id,
     owner,   
     title,
     speaker,
     date,
     start_time,
     end_time,
-    summary,
-    created_at,
-    updated_at
+    summary,    
   } = props;
 
   const currentUser = useCurrentUser();
@@ -64,6 +59,7 @@ const Talk = (props) => {
               pathname: "/bookings/create", 
               state: {
                 title: title,
+                date: date,
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>

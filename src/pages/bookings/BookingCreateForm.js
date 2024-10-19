@@ -22,12 +22,13 @@ function BookingCreateForm() {
 
   const [bookingData, setBookingData] = useState({
     talk: location.state?.title,
+    date: location.state?.date,
     name: "",
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, name, email, questions, suggestions } = bookingData;
+  const { talk, date, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -43,6 +44,7 @@ function BookingCreateForm() {
     const formData = new FormData();
 
     formData.append("talk", talk);
+    formData.append("date", date);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);
@@ -73,6 +75,17 @@ function BookingCreateForm() {
           type="text"
           name="talk"
           value={talk}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Date:</Form.Label>
+        <Form.Control
+          type="date"
+          name="date"
+          value={date}
           onChange={handleChange}
           disabled
         />
