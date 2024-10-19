@@ -29,9 +29,6 @@ function TalksPage() {
     setHasLoaded(false);
     fetchTalks(); 
   }, []);
-  
-// I need a new function or a const within TalksPage to 'handle event' of
-// when the user clicks on 'Register'
 
   return (
     <Container className={styles.Content}>
