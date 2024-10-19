@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useEffect, useState  } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -11,27 +11,43 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
+// import { useRedirect } from "../../hooks/useRedirect";
 
 
 function BookingEditForm() {
 
   const location = useLocation()
-
   const [errors, setErrors] = useState({});
-  useRedirect('loggedOut');
+  // useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
     talk: location.state?.title,
+    date: location.state?.date,
     name: "",
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, name, email, questions, suggestions } = bookingData;
+  const { talk, date, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
+  const { id } = useParams();
 
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/bookings/${id}/`);
+        const { talk, date, name, email, questions, suggestions, is_owner } = data;
+
+        is_owner ? setBookingData({ talk, date, name, email, questions, suggestions }) : history.push("/");
+      } catch (err) {
+        // console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);   
+  
   const handleChange = (event) => {
     setBookingData({
       ...bookingData,
@@ -44,6 +60,7 @@ function BookingEditForm() {
     const formData = new FormData();
 
     formData.append("talk", talk);
+    formData.append("date", date);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);
@@ -55,9 +72,8 @@ function BookingEditForm() {
     }
     
     try {
-      const { data } = await axiosReq.post("/bookings/", formData);
-      console.log(data)
-      history.push(`/bookings/${data.id}`);
+      await axiosReq.put(`/bookings/${id}/`, formData);
+      history.push(`/bookings/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -74,6 +90,17 @@ function BookingEditForm() {
           type="text"
           name="talk"
           value={talk}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Date:</Form.Label>
+        <Form.Control
+          type="date"
+          name="date"
+          value={date}
           onChange={handleChange}
           disabled
         />
@@ -139,7 +166,7 @@ function BookingEditForm() {
         className={`${btnStyles.Button} ${btnStyles.Blue}`} 
         type="submit"
       >
-        Edit
+        Submit
       </Button>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

@@ -54,7 +54,7 @@ const Booking = (props) => {
           </Table>
           <Container>
             <Link to={{
-              pathname: "/bookings",            
+              pathname: "/bookings/edit",      
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Edit
