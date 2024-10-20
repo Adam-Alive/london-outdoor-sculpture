@@ -10,12 +10,17 @@ import btnStyles from "../../styles/Button.module.css"
 
 const Booking = (props) => {
   const {    
+    owner,
     talk,
     date,
+    name,
+    email,
     start_time,
     end_time,
     questions,
     suggestions,
+    created_at,
+    updated_at,
   } = props;
 
   const currentUser = useCurrentUser();

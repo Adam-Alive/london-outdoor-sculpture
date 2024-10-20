@@ -18,6 +18,8 @@ const Talk = (props) => {
     start_time,
     end_time,
     summary,
+    created_at,
+    updated_at,
   } = props;
 
   const currentUser = useCurrentUser();
