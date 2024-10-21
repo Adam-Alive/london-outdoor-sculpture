@@ -14,13 +14,11 @@ const Booking = (props) => {
     talk,
     speaker,
     date,
-    email,
     start_time,
     end_time,
+    summary,
     questions,
     suggestions,
-    created_at,
-    updated_at,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -37,7 +35,7 @@ const Booking = (props) => {
                   </tr>}
                   {speaker &&
                   <tr>
-                      <td>speaker:</td>
+                      <td>Speaker:</td>
                       <td>{speaker}</td>
                   </tr>}
                 {date &&
@@ -54,7 +52,12 @@ const Booking = (props) => {
                   <tr>
                       <td>Ends at:</td>
                       <td>{end_time}</td>
-                  </tr>}          
+                  </tr>}
+                  {summary &&
+                  <tr>
+                      <td>Summary:</td>
+                      <td>{summary}</td>
+                  </tr>}         
                 {questions &&
                   <tr>
                       <td>Questions:</td>
@@ -76,6 +79,7 @@ const Booking = (props) => {
                 date: date,
                 start_time: start_time,
                 end_time: end_time,
+                summary: summary,
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>

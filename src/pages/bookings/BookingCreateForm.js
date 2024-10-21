@@ -25,11 +25,11 @@ function BookingCreateForm() {
     date: location.state?.date,
     start_time: location.state?.start_time,
     end_time: location.state?.end_time,
-    email: "",
+    summary: location.state?.summary,
     questions: "",
     suggestions: "",
   });
-  const { talk, speaker, date, start_time, end_time, email, questions, suggestions } = bookingData;
+  const { talk, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -48,8 +48,8 @@ function BookingCreateForm() {
     formData.append("speaker", speaker);
     formData.append("date", date);
     formData.append("start_time", start_time);
-    formData.append("end_time", end_time);   
-    formData.append("email", email);
+    formData.append("end_time", end_time);
+    formData.append("summary", summary);
     formData.append("questions", questions);
     formData.append("suggestions", suggestions);
 
@@ -124,23 +124,18 @@ function BookingCreateForm() {
           onChange={handleChange}
           disabled
         />
-      </Form.Group>      
+      </Form.Group>
 
       <Form.Group>
-        <Form.Label>Email:</Form.Label>
+        <Form.Label>Summary:</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter your email address"
-          name="email"
-          value={email}
+          name="summary"
+          value={summary}
           onChange={handleChange}
+          disabled
         />
-      </Form.Group>
-      {errors?.email?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+      </Form.Group>   
 
       <Form.Group>
         <Form.Label>Questions for the speaker:</Form.Label>
@@ -153,6 +148,11 @@ function BookingCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.questions?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Suggestions for future talks:</Form.Label>
@@ -164,7 +164,12 @@ function BookingCreateForm() {
           value={suggestions}
           onChange={handleChange}
         />
-      </Form.Group>    
+      </Form.Group>
+      {errors?.suggestions?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}  
 
       <Button 
         className={`${btnStyles.Button} ${btnStyles.Blue}`} 

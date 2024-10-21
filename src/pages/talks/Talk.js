@@ -16,7 +16,7 @@ const Talk = (props) => {
     start_time,
     end_time,
     summary,  
-  } = props;  
+  } = props;
 
     return (
       <Container>
@@ -57,7 +57,8 @@ const Talk = (props) => {
                 speaker: speaker,
                 date: date,
                 start_time: start_time,
-                end_time: end_time,   
+                end_time: end_time,
+                summary: summary, 
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
