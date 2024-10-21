@@ -1,5 +1,4 @@
 import React from "react";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 
 import Table from "react-bootstrap/Table";
@@ -10,20 +9,14 @@ import btnStyles from "../../styles/Button.module.css"
 // Talks are created by an administrator in the API admin panel.
 
 const Talk = (props) => {
-  const {
-    owner,   
+  const {   
     title,
     speaker,
     date,
     start_time,
     end_time,
-    summary,
-    created_at,
-    updated_at,
-  } = props;
-
-  const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
+    summary,  
+  } = props;  
 
     return (
       <Container>
@@ -63,7 +56,8 @@ const Talk = (props) => {
                 title: title,
                 speaker: speaker,
                 date: date,
-                start_time: start_time,      
+                start_time: start_time,
+                end_time: end_time,   
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
