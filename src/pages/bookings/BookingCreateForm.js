@@ -16,19 +16,20 @@ import { useRedirect } from "../../hooks/useRedirect";
 function BookingCreateForm() {
 
   const location = useLocation()
-
   const [errors, setErrors] = useState({});
   useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
     talk: location.state?.title,
+    speaker: location.state?.speaker,
     date: location.state?.date,
+    start_time: location.state?.start_time,
     name: "",
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, date, name, email, questions, suggestions } = bookingData;
+  const { talk, speaker, date, start_time, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -44,7 +45,9 @@ function BookingCreateForm() {
     const formData = new FormData();
 
     formData.append("talk", talk);
+    formData.append("speaker", speaker);
     formData.append("date", date);
+    formData.append("start_time", start_time);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);
@@ -56,8 +59,7 @@ function BookingCreateForm() {
     }
     
     try {
-      const { data } = await axiosReq.post("/bookings/", formData);
-      console.log(data)
+      const { data } = await axiosReq.post("/bookings/", formData);   
       history.push(`/bookings/${data.id}`);
     } catch (err) {
       console.log(err);
@@ -81,6 +83,17 @@ function BookingCreateForm() {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>Speaker:</Form.Label>
+        <Form.Control
+          type="text"
+          name="speaker"
+          value={speaker}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group>      
+
+      <Form.Group>
         <Form.Label>Date:</Form.Label>
         <Form.Control
           type="date"
@@ -92,10 +105,21 @@ function BookingCreateForm() {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>Time:</Form.Label>
+        <Form.Control
+          type="time"
+          name="start_time"
+          value={start_time}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group>
+
+      <Form.Group>
         <Form.Label>Name:</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter name"
+          placeholder="Enter your name"
           name="name"
           value={name}
           onChange={handleChange}
@@ -111,7 +135,7 @@ function BookingCreateForm() {
         <Form.Label>Email:</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter email address"
+          placeholder="Enter your email address"
           name="email"
           value={email}
           onChange={handleChange}

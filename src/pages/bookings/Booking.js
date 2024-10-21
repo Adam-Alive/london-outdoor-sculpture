@@ -12,6 +12,7 @@ const Booking = (props) => {
   const {    
     owner,
     talk,
+    speaker,
     date,
     name,
     email,
@@ -34,6 +35,11 @@ const Booking = (props) => {
                   <tr>
                       <td>Talk:</td>
                       <td>{talk}</td>
+                  </tr>}
+                  {speaker &&
+                  <tr>
+                      <td>speaker:</td>
+                      <td>{speaker}</td>
                   </tr>}
                 {date &&
                   <tr>

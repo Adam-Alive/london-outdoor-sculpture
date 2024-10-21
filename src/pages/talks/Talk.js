@@ -61,7 +61,9 @@ const Talk = (props) => {
               pathname: "/bookings/create", 
               state: {
                 title: title,
+                speaker: speaker,
                 date: date,
+                start_time: start_time,       
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
