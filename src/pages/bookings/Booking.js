@@ -22,10 +22,11 @@ const Booking = (props) => {
     suggestions,
     created_at,
     updated_at,
+    is_owner,
   } = props;
 
   const currentUser = useCurrentUser();
-//   const is_owner = currentUser?.username === owner;
+  const is_owner = currentUser?.username === owner;
 
     return (
       <Container>
