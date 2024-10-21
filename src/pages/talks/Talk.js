@@ -18,12 +18,9 @@ const Talk = (props) => {
     start_time,
     end_time,
     summary,
-    id,
     created_at,
     updated_at,
   } = props;
-
-  console.log(id)
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -34,7 +31,7 @@ const Talk = (props) => {
               <tbody>
                 {title &&
                   <tr>
-                      <td>Title: {id}</td>
+                      <td>Title:</td>
                       <td>{title}</td>
                   </tr>}
                 {speaker &&
@@ -63,12 +60,10 @@ const Talk = (props) => {
             <Link to={{
               pathname: "/bookings/create", 
               state: {
-                talk_id: id,
-                title: title, // This is the title name. You must also add the title ID
+                title: title,
                 speaker: speaker,
                 date: date,
-                start_time: start_time, 
-                end_time: end_time,  
+                start_time: start_time,      
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
@@ -81,4 +76,3 @@ const Talk = (props) => {
   };
 
 export default Talk;
-

@@ -20,7 +20,6 @@ function TalksPage() {
     const fetchTalks = async () => {
       try {
         const { data } = await axiosReq.get(`/talks/`);
-
         setTalks(data);
         setHasLoaded(true);
       } catch (err) {
