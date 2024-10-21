@@ -21,6 +21,7 @@ function Bookings() {
     const fetchBookings = async () => {
       try {
         const { data } = await axiosReq.get(`/bookings/`);
+        console.log(data)
         setBookings(data);
         setHasLoaded(true);
       } catch (err) {

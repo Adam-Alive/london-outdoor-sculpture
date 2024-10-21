@@ -24,6 +24,8 @@ function BookingCreateForm() {
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
+    end_time: location.state?.end_time,
+    talk_id: location.state?.talk_id,
     name: "",
     email: "",
     questions: "",
@@ -44,10 +46,11 @@ function BookingCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("talk", talk);
+    formData.append("talk", bookingData.talk_id);
     formData.append("speaker", speaker);
     formData.append("date", date);
-    formData.append("start_time", start_time);
+    formData.append("start_time", bookingData.start_time);
+    formData.append("end_time", bookingData.end_time);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);

@@ -67,6 +67,17 @@ const Booking = (props) => {
             <Link to={{
               pathname: "/bookings/edit",      
             }}>
+              {/* <Link to={{
+              pathname: "/bookings/create", 
+              state: {
+                talk_id: id,
+                title: title, // This is the title name. You must also add the title ID
+                speaker: speaker,
+                date: date,
+                start_time: start_time, 
+                end_time: end_time,  
+              }
+            }}></Link> */}
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Edit
             </Button>
