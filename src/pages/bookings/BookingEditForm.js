@@ -9,25 +9,25 @@ import styles from "../../styles/BookingCreateEditForm.module.css"
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory, useLocation, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
-
 
 function BookingEditForm() {
 
-  const location = useLocation()
+  // const location = useLocation()
   const [errors, setErrors] = useState({});
 
-
   const [bookingData, setBookingData] = useState({
-    talk: location.state?.title,
-    date: location.state?.date,
+    talk: "",
+    date: "",
+    date: "",
+    start_time: "",
     name: "",
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, date, name, email, questions, suggestions } = bookingData;
+  const { talk, speaker, date, start_time, name, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
   const { id } = useParams();
@@ -36,11 +36,11 @@ function BookingEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/bookings/${id}/`);
-        const { talk, date, name, email, questions, suggestions, is_owner } = data;
+        const { talk, speaker, date, start_time, name, email, questions, suggestions, is_owner } = data;
 
-        is_owner ? setBookingData({ talk, date, name, email, questions, suggestions }) : history.push("/");
+        is_owner ? setBookingData({ talk, speaker, date, start_time, name, email, questions, suggestions }) : history.push("/");
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     };
 
@@ -59,7 +59,9 @@ function BookingEditForm() {
     const formData = new FormData();
 
     formData.append("talk", talk);
+    formData.append("speaker", speaker);
     formData.append("date", date);
+    formData.append("start_time", start_time);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("questions", questions);
@@ -95,6 +97,17 @@ function BookingEditForm() {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>Speaker:</Form.Label>
+        <Form.Control
+          type="text"
+          name="speaker"
+          value={speaker}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group> 
+
+      <Form.Group>
         <Form.Label>Date:</Form.Label>
         <Form.Control
           type="date"
@@ -106,10 +119,21 @@ function BookingEditForm() {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>Time:</Form.Label>
+        <Form.Control
+          type="time"
+          name="start_time"
+          value={start_time}
+          onChange={handleChange}
+          disabled
+        />
+      </Form.Group>
+
+      <Form.Group>
         <Form.Label>Name:</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter name"
+          placeholder="Enter your name"
           name="name"
           value={name}
           onChange={handleChange}
@@ -125,7 +149,7 @@ function BookingEditForm() {
         <Form.Label>Email:</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter email address"
+          placeholder="Enter your email address"
           name="email"
           value={email}
           onChange={handleChange}
