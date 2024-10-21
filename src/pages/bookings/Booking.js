@@ -14,7 +14,6 @@ const Booking = (props) => {
     talk,
     speaker,
     date,
-    name,
     email,
     start_time,
     end_time,
@@ -46,11 +45,16 @@ const Booking = (props) => {
                       <td>Date:</td>
                       <td>{date}</td>
                   </tr>}
-                {start_time && end_time &&
+                {start_time &&
                   <tr>
-                      <td>Time:</td>
-                      <td>{start_time} to {end_time}</td>
+                      <td>Starts at:</td>
+                      <td>{start_time}</td>
                   </tr>}            
+                {end_time &&
+                  <tr>
+                      <td>Ends at:</td>
+                      <td>{end_time}</td>
+                  </tr>}          
                 {questions &&
                   <tr>
                       <td>Questions:</td>
@@ -65,7 +69,14 @@ const Booking = (props) => {
           </Table>
           <Container>
             <Link to={{
-              pathname: "/bookings/edit",      
+              pathname: "/bookings/edit",
+              state: {
+                talk: talk,
+                speaker: speaker,
+                date: date,
+                start_time: start_time,
+                end_time: end_time,
+              }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Edit

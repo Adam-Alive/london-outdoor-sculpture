@@ -24,12 +24,12 @@ function BookingCreateForm() {
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
-    name: "",
+    end_time: location.state?.end_time,
     email: "",
     questions: "",
     suggestions: "",
   });
-  const { talk, speaker, date, start_time, name, email, questions, suggestions } = bookingData;
+  const { talk, speaker, date, start_time, end_time, email, questions, suggestions } = bookingData;
 
   const history = useHistory();
 
@@ -48,7 +48,7 @@ function BookingCreateForm() {
     formData.append("speaker", speaker);
     formData.append("date", date);
     formData.append("start_time", start_time);
-    formData.append("name", name);
+    formData.append("end_time", end_time);   
     formData.append("email", email);
     formData.append("questions", questions);
     formData.append("suggestions", suggestions);
@@ -105,7 +105,7 @@ function BookingCreateForm() {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Time:</Form.Label>
+        <Form.Label>Starts at:</Form.Label>
         <Form.Control
           type="time"
           name="start_time"
@@ -116,20 +116,15 @@ function BookingCreateForm() {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Name:</Form.Label>
+        <Form.Label>Ends at:</Form.Label>
         <Form.Control
-          type="text"
-          placeholder="Enter your name"
-          name="name"
-          value={name}
+          type="time"
+          name="end_time"
+          value={end_time}
           onChange={handleChange}
+          disabled
         />
-      </Form.Group>
-      {errors?.name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+      </Form.Group>      
 
       <Form.Group>
         <Form.Label>Email:</Form.Label>
