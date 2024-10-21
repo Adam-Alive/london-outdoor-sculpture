@@ -14,7 +14,6 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 function BookingEditForm() {
 
-  // const location = useLocation()
   const [errors, setErrors] = useState({});
 
   const [bookingData, setBookingData] = useState({
@@ -201,9 +200,11 @@ function BookingEditForm() {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>   
+    <Form onSubmit={handleSubmit}>
+      <h3>Edit Booking</h3>
+      <br />
       <Container className= {`${appStyles.Content} ${styles.FormLabel}`}>
-      {textFields}
+            {textFields}
       </Container>
     </Form>
   );
