@@ -195,7 +195,7 @@ function BookingEditForm() {
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        Delete
+        Cancel
       </Button>
     </div>
   );
