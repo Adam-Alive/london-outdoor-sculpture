@@ -20,7 +20,7 @@ function BookingCreateForm() {
   useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
-    talk: location.state?.title,
+    talk: location.state?.id,
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
@@ -76,7 +76,7 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={location.state?.title}
           onChange={handleChange}
           disabled
         />
