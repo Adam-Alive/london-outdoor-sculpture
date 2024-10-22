@@ -23,6 +23,7 @@ const Booking = (props) => {
     questions,
     suggestions,
     bookings,
+    talk_name
   } = props;
 
     const currentUser = useCurrentUser();
@@ -30,7 +31,10 @@ const Booking = (props) => {
     const history = useHistory();
 
     const handleEdit = () => {
-      history.push(`/bookings/${id}/edit`);
+      history.push({
+        pathname: `/bookings/${id}/edit`,
+        search: `?talk_name=${talk_name}`
+      });
     };
   
     const handleDelete = async () => {
@@ -52,7 +56,7 @@ const Booking = (props) => {
                 {talk &&
                   <tr>
                       <td>Talk:</td>
-                      <td>{talk}</td>
+                      <td>{talk_name}</td>
                   </tr>}
                   {speaker &&
                   <tr>

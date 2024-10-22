@@ -29,6 +29,9 @@ function BookingEditForm() {
   });
   const { talk, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
 
+  const queryParams = new URLSearchParams(location.search);
+  const talk_name = queryParams.get('talk_name');
+  
   const history = useHistory();
   const { id } = useParams();
 
@@ -90,7 +93,7 @@ function BookingEditForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={talk_name}
           onChange={handleChange}
           disabled
         />

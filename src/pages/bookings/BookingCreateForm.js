@@ -19,6 +19,8 @@ function BookingCreateForm() {
   const [errors, setErrors] = useState({});
   useRedirect('loggedOut');
 
+  const [bookingTitle, setBookingTitle] = useState(location.state?.title)
+
   const [bookingData, setBookingData] = useState({
     talk: location.state?.id,
     speaker: location.state?.speaker,
@@ -76,7 +78,7 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={bookingTitle}
           onChange={handleChange}
           disabled
         />
