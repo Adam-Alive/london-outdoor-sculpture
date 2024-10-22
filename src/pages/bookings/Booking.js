@@ -23,7 +23,6 @@ const Booking = (props) => {
     questions,
     suggestions,
     bookings,
-    setBookings,
   } = props;
 
     const currentUser = useCurrentUser();
