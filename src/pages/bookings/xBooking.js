@@ -1,18 +1,15 @@
 import React from "react";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Link } from "react-router-dom";
 
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import btnStyles from "../../styles/Button.module.css"
 
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { axiosRes } from "../../api/axiosDefaults";
-import { useHistory } from "react-router-dom";
-
 
 const Booking = (props) => {
   const {    
-    id,
     owner,
     talk,
     speaker,
@@ -22,29 +19,10 @@ const Booking = (props) => {
     summary,
     questions,
     suggestions,
-    bookings,
-    setBookings,
   } = props;
 
-    const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner;
-    const history = useHistory();
-
-    const handleEdit = () => {
-      history.push(`/bookings/${id}/edit`);
-    };
-  
-    const handleDelete = async () => {
-      const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
-      if (confirmDelete) {
-        try {
-          await axiosRes.delete(`/bookings/${id}`);
-          history.goBack();
-        } catch (err) {
-          // console.log(err);
-        }
-      }
-    }
+  const currentUser = useCurrentUser();
+//   const is_owner = currentUser?.username === owner;
 
     return (
       <Container>
@@ -92,17 +70,22 @@ const Booking = (props) => {
                   </tr>}                  
                 </tbody>
           </Table>
-          <Container>         
-            <Button 
-                className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`} type="submit"
-                onClick={handleEdit}>
+          <Container>
+            <Link to={{
+              pathname: "/bookings/edit",
+              state: {
+                talk: talk,
+                speaker: speaker,
+                date: date,
+                start_time: start_time,
+                end_time: end_time,
+                summary: summary,
+              }
+            }}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>
                 Edit
             </Button>
-            <Button 
-                className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}
-                onClick={handleDelete}>
-                Delete
-            </Button>
+            </Link>
           </Container>         
       </Container>
     );
