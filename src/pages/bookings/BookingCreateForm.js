@@ -76,7 +76,7 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={location.state?.title}
+          value={talk}
           onChange={handleChange}
           disabled
         />

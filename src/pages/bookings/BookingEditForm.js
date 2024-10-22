@@ -18,7 +18,7 @@ function BookingEditForm() {
   const [errors, setErrors] = useState({});
 
   const [bookingData, setBookingData] = useState({
-    talk: location.state?.title,
+    talk: location.state?.id,
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
