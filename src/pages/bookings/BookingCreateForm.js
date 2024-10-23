@@ -14,7 +14,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
 function BookingCreateForm() {
-
+   
   const location = useLocation()
   const [errors, setErrors] = useState({});
   useRedirect('loggedOut');
@@ -22,6 +22,7 @@ function BookingCreateForm() {
   const [bookingTitle, setBookingTitle] = useState(location.state?.title)
 
   const [bookingData, setBookingData] = useState({
+    owner: location.state?.owner,
     talk: location.state?.id,
     speaker: location.state?.speaker,
     date: location.state?.date,

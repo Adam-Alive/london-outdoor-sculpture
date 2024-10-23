@@ -22,7 +22,7 @@ const Booking = (props) => {
     summary,
     questions,
     suggestions,
-    bookings,
+    // bookings,
     talk_name
   } = props;
 
@@ -51,6 +51,8 @@ const Booking = (props) => {
 
     return (
       <Container>
+        {is_owner && (
+          <>        
         <Table striped bordered>
               <tbody>
                 {talk &&
@@ -107,6 +109,8 @@ const Booking = (props) => {
                 Delete
             </Button>
           </Container>         
+          </>
+        )}          
       </Container>
     );
   };
