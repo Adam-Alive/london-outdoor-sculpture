@@ -14,7 +14,8 @@ const Booking = (props) => {
   const {    
     id,
     owner,
-    talk,
+    // talk,
+    talk_name,
     speaker,
     date,
     start_time,
@@ -49,10 +50,10 @@ const Booking = (props) => {
       <Container>
         <Table striped bordered>
               <tbody>
-                {talk &&
+                {talk_name &&
                   <tr>
                       <td>Talk:</td>
-                      <td>{talk}</td>
+                      <td>{talk_name}</td>
                   </tr>}
                   {speaker &&
                   <tr>
