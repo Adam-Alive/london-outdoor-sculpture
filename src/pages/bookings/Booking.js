@@ -22,8 +22,7 @@ const Booking = (props) => {
     summary,
     questions,
     suggestions,
-    // bookings,
-    talk_name
+    bookings,
   } = props;
 
     const currentUser = useCurrentUser();
@@ -31,10 +30,7 @@ const Booking = (props) => {
     const history = useHistory();
 
     const handleEdit = () => {
-      history.push({
-        pathname: `/bookings/${id}/edit`,
-        search: `?talk_name=${talk_name}`
-      });
+      history.push(`/bookings/${id}/edit`);
     };
   
     const handleDelete = async () => {
@@ -51,14 +47,12 @@ const Booking = (props) => {
 
     return (
       <Container>
-        {is_owner && (
-          <>        
         <Table striped bordered>
               <tbody>
                 {talk &&
                   <tr>
                       <td>Talk:</td>
-                      <td>{talk_name}</td>
+                      <td>{talk}</td>
                   </tr>}
                   {speaker &&
                   <tr>
@@ -109,8 +103,6 @@ const Booking = (props) => {
                 Delete
             </Button>
           </Container>         
-          </>
-        )}          
       </Container>
     );
   };

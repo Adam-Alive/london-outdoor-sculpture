@@ -16,26 +16,8 @@ import NoResults from "../../assets/no-results.png";
 function Bookings() {
   const [bookings, setBookings] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
-  const [talkMapping, setTalkMapping] = useState({});
 
   useEffect(() => {
-
-    const fetchTalks = async () => {
-      try {
-        const { data } = await axiosReq.get(`/talks/`);
-        console.log(data)
-        
-        const talk_mapping = data.results.reduce((acc, obj) => {
-          acc[obj.id] = obj.title;
-          return acc
-        }, {});
-
-        setTalkMapping(talk_mapping)
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
     const fetchBookings = async () => {
       try {
         const { data } = await axiosReq.get(`/bookings/`);
@@ -46,7 +28,6 @@ function Bookings() {
       }
     };
     setHasLoaded(false);
-    fetchTalks();
     fetchBookings(); 
   }, []);
 
@@ -58,7 +39,7 @@ function Bookings() {
           <>
             {bookings.results.length ? (
               bookings.results.map((booking) => (
-                <Booking key={booking.id} {...booking} talk_name={talkMapping[booking.talk]} setBookings={setBookings} />
+                <Booking key={booking.id} {...booking} setBookings={setBookings} />
               ))
             ) : (
               <Container className={appStyles.Content}>
