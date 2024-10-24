@@ -8,6 +8,3 @@
     handleDelete={handleDelete}
   />
 )}
-
-
-onClick={() => history.goBack()}

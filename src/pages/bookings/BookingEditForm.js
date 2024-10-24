@@ -19,6 +19,7 @@ function BookingEditForm() {
 
   const [bookingData, setBookingData] = useState({
     talk: location.state?.id,
+    title: location.state?.title,
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
@@ -27,7 +28,7 @@ function BookingEditForm() {
     questions: "",
     suggestions: "",
   });
-  const { talk, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
+  const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
 
   const history = useHistory();
   const { id } = useParams();
@@ -36,9 +37,9 @@ function BookingEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/bookings/${id}/`);
-        const { talk, speaker, date, start_time, end_time, summary, questions, suggestions, is_owner } = data;
+        const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions, is_owner } = data;
 
-        is_owner ? setBookingData({ talk, speaker, date, start_time, end_time, summary, questions, suggestions }) : history.push("/");
+        is_owner ? setBookingData({ talk, title, speaker, date, start_time, end_time, summary, questions, suggestions }) : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -59,6 +60,7 @@ function BookingEditForm() {
     const formData = new FormData();
 
     formData.append("talk", talk);
+    formData.append("title", title);
     formData.append("speaker", speaker);
     formData.append("date", date);
     formData.append("start_time", start_time);
@@ -90,7 +92,7 @@ function BookingEditForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={title}
           onChange={handleChange}
           disabled
         />

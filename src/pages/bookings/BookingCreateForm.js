@@ -21,9 +21,7 @@ function BookingCreateForm() {
 
   const [bookingData, setBookingData] = useState({
     talk: location.state?.id,
-    // id: location.state?.id,
-    // talk_name: location.state?.talk_name,
-    // title: location.state?.title,
+    title: location.state?.title,
     speaker: location.state?.speaker,
     date: location.state?.date,
     start_time: location.state?.start_time,
@@ -32,7 +30,7 @@ function BookingCreateForm() {
     questions: "",
     suggestions: "",
   });
-  const { talk, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
+  const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
   console.log(bookingData)
 
   const history = useHistory();
@@ -48,9 +46,8 @@ function BookingCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    // formData.append("talk", talk);
-    // formData.append("talk_name", talk_name);
     formData.append("talk", talk);
+    formData.append("title", title);
     formData.append("speaker", speaker);
     formData.append("date", date);
     formData.append("start_time", start_time);
@@ -82,7 +79,7 @@ function BookingCreateForm() {
         <Form.Control
           type="text"
           name="talk"
-          value={talk}
+          value={title}
           onChange={handleChange}
           disabled
         />
