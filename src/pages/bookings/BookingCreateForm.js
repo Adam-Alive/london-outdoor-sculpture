@@ -19,8 +19,7 @@ function BookingCreateForm() {
   const [errors, setErrors] = useState({});
   useRedirect('loggedOut');
 
-  const [bookingData, setBookingData] = useState({
-    // talk: location.state?.id,
+  const [bookingData, setBookingData] = useState({  
     title: location.state?.title,
     speaker: location.state?.speaker,
     date: location.state?.date,
@@ -45,8 +44,7 @@ function BookingCreateForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-
-    // formData.append("talk", talk);
+   
     formData.append("title", title);
     formData.append("speaker", speaker);
     formData.append("date", date);

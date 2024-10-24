@@ -10,14 +10,13 @@ import btnStyles from "../../styles/Button.module.css"
 
 const Talk = (props) => {
   const {   
-    // id,
-    // talk,
+    id,
     title,
     speaker,
     date,
     start_time,
     end_time,
-    summary,  
+    summary, 
   } = props;
 
     return (
@@ -61,8 +60,7 @@ const Talk = (props) => {
                 start_time: start_time,
                 end_time: end_time,
                 summary: summary,
-                // id: id,
-                // talk: talk,
+                id: id,               
               }
             }}>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}>

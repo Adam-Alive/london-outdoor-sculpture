@@ -17,8 +17,7 @@ function BookingEditForm() {
   const location = useLocation()
   const [errors, setErrors] = useState({});
 
-  const [bookingData, setBookingData] = useState({
-    talk: location.state?.id,
+  const [bookingData, setBookingData] = useState({    
     title: location.state?.title,
     speaker: location.state?.speaker,
     date: location.state?.date,
@@ -28,7 +27,7 @@ function BookingEditForm() {
     questions: "",
     suggestions: "",
   });
-  const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
+  const { title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
 
   const history = useHistory();
   const { id } = useParams();
@@ -37,9 +36,9 @@ function BookingEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/bookings/${id}/`);
-        const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions, is_owner } = data;
+        const { title, speaker, date, start_time, end_time, summary, questions, suggestions, is_owner } = data;
 
-        is_owner ? setBookingData({ talk, title, speaker, date, start_time, end_time, summary, questions, suggestions }) : history.push("/");
+        is_owner ? setBookingData({ title, speaker, date, start_time, end_time, summary, questions, suggestions }) : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -59,7 +58,6 @@ function BookingEditForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("talk", talk);
     formData.append("title", title);
     formData.append("speaker", speaker);
     formData.append("date", date);
@@ -88,10 +86,10 @@ function BookingEditForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Talk:</Form.Label>
+        <Form.Label>Title:</Form.Label>
         <Form.Control
           type="text"
-          name="talk"
+          name="title"
           value={title}
           onChange={handleChange}
           disabled
