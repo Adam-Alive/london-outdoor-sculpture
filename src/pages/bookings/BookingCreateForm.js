@@ -20,7 +20,7 @@ function BookingCreateForm() {
   useRedirect('loggedOut');
 
   const [bookingData, setBookingData] = useState({
-    talk: location.state?.id,
+    // talk: location.state?.id,
     title: location.state?.title,
     speaker: location.state?.speaker,
     date: location.state?.date,
@@ -30,7 +30,7 @@ function BookingCreateForm() {
     questions: "",
     suggestions: "",
   });
-  const { talk, title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
+  const { title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
   console.log(bookingData)
 
   const history = useHistory();
@@ -46,7 +46,7 @@ function BookingCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("talk", talk);
+    // formData.append("talk", talk);
     formData.append("title", title);
     formData.append("speaker", speaker);
     formData.append("date", date);
@@ -75,10 +75,10 @@ function BookingCreateForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Talk:</Form.Label>
+        <Form.Label>Title:</Form.Label>
         <Form.Control
           type="text"
-          name="talk"
+          name="title"
           value={title}
           onChange={handleChange}
           disabled
