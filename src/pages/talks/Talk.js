@@ -52,7 +52,7 @@ const Talk = (props) => {
           </Table>
           <Container>
             <Link to={{
-              pathname: "/bookings/create", 
+              pathname: "/bookings/create",
               state: {
                 title: title,
                 speaker: speaker,
