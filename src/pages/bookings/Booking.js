@@ -9,7 +9,6 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useHistory } from "react-router-dom";
 
-
 const Booking = (props) => {
   const {    
     id,
@@ -22,7 +21,6 @@ const Booking = (props) => {
     summary,
     questions,
     suggestions,
-    bookings,
   } = props;
 
     const currentUser = useCurrentUser();
@@ -31,14 +29,13 @@ const Booking = (props) => {
 
     const handleEdit = () => {
       history.push(`/bookings/${id}/edit`);
-    };
-  
+    };  
     const handleDelete = async () => {
       const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
       if (confirmDelete) {
         try {
           await axiosRes.delete(`/bookings/${id}`);
-          history.goBack();
+          history.push(`/bookings/${id}/`);
         } catch (err) {
           // console.log(err);
         }
@@ -98,7 +95,7 @@ const Booking = (props) => {
                 Edit
             </Button>
             <Button 
-                className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`}
+                className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Talk}`} type="submit"
                 onClick={handleDelete}>
                 Delete
             </Button>
