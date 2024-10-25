@@ -184,7 +184,7 @@ The following features would add to the user experience:
 - [React Bootstrap](https://react-bootstrap.netlify.app/) for the front-end CSS styling.
 - [Django](https://www.djangoproject.com) as the Python framework for the site.
 - [PostgreSQL](https://www.postgresql.org) for relational database management.
-- [Code Institute PostgreSQL](https://dbs.ci-dbs.net/) to host the PostgreSQL database.
+- [Neon](https://neon.tech/) to host the PostgreSQL database.
 - [Cloudinary](https://cloudinary.com) for online static file storage.
 - [Font Awesome](https://fontawesome.com) for icons.
 - [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the completed project.
@@ -234,9 +234,9 @@ I also used the MoSCow prioritisation model to add labels to my user stories wit
 
 **A summary of open and closed issues can be accessed via these tabs:**
 
-- [![GitHub issues](https://img.shields.io/github/issues/Adam-Alive/camden-curling-club)](https://github.com/Adam-Alive/camden-curling-club/issues)
+- [![GitHub issues](https://img.shields.io/github/issues/Adam-Alive/london-outdoor-sculpture)](https://github.com/Adam-Alive/london-outdoor-sculpture/issues)
 
-- [![GitHub closed issues](https://img.shields.io/github/issues-closed/Adam-Alive/camden-curling-club)](https://github.com/Adam-Alive/camden-curling-club/issues?q=is%3Aissue+is%3Aclosed)
+- [![GitHub closed issues](https://img.shields.io/github/issues-closed/Adam-Alive/london-outdoor-sculpture)](https://github.com/Adam-Alive/london-outdoor-sculpture/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Testing
 
@@ -250,7 +250,7 @@ The live application is deployed on Heroku at: [Heroku](https://london-outdoor-s
 
 ### PostgreSQL Database
 
-This project uses a PostgreSQL database at [Code Institute](https://dbs.ci-dbs.net/).
+This project uses a PostgreSQL database at [Neon](https://neon.tech/).
 
 ### Cloudinary API
 
