@@ -34,10 +34,10 @@ const Booking = (props) => {
       const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
       if (confirmDelete) {
         try {
-          await axiosRes.delete(`/bookings/${id}`);
-          history.push(`/bookings/${id}/`);
+          await axiosRes.delete(`/bookings/${id}/`);
+          history.push(`/bookings/${id}`);
         } catch (err) {
-          // console.log(err);
+          console.log(err);
         }
       }
     }
