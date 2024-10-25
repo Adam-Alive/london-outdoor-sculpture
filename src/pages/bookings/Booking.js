@@ -21,6 +21,8 @@ const Booking = (props) => {
     summary,
     questions,
     suggestions,
+    setBookings,
+    bookings,
   } = props;
 
     const currentUser = useCurrentUser();
@@ -35,7 +37,10 @@ const Booking = (props) => {
       if (confirmDelete) {
         try {
           await axiosRes.delete(`/bookings/${id}/`);
-          history.push(`/bookings/${id}`);
+          setBookings({
+            ...bookings,
+            results: bookings.results.filter((booking) => booking.id !== id),
+          });
         } catch (err) {
           console.log(err);
         }

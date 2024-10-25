@@ -39,7 +39,7 @@ function Bookings() {
           <>
             {bookings.results.length ? (
               bookings.results.map((booking) => (
-                <Booking key={booking.id} {...booking} setBookings={setBookings} />
+                <Booking key={booking.id} {...booking} setBookings={setBookings} bookings={bookings} />
               ))
             ) : (
               <Container className={appStyles.Content}>
