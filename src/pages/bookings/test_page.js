@@ -36,6 +36,10 @@ function BookingPage() {
           }
         };
     
+        // Take this from BookingEditForm line 38 and try!!
+         const { data } = await axiosReq.get(`/bookings/${id}/`);
+
+
         handleMount();
       }, [id]);
 
