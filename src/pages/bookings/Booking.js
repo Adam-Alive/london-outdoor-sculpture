@@ -49,6 +49,8 @@ const Booking = (props) => {
 
     return (
       <Container>
+        {is_owner && (
+        <>
         <Table striped bordered>
               <tbody>
                 {title &&
@@ -104,7 +106,9 @@ const Booking = (props) => {
                 onClick={handleDelete}>
                 Delete
             </Button>
-          </Container>         
+          </Container>
+          </>
+          )}  
       </Container>
     );
   };
