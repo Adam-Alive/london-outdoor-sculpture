@@ -45,7 +45,7 @@ function Bookings() {
     <Container className={styles.Content}>
       <h3>My Bookings</h3>
       <br />      
-        {hasLoaded ? (
+        {is_owner && hasLoaded ? (
           <>
             {bookings.results.length ? (
               bookings.results.map((booking) => (
