@@ -1,3 +1,26 @@
+// Terst code:
+useEffect(() => {
+  const handleMount = async () => {
+    if (currentUser?.profile_id?.toString() === id) {
+      try {
+        const { data } = await axiosReq.get(`/profiles/${id}/`);
+        const { name, content, image } = data;
+        setProfileData({ name, content, image });
+      } catch (err) {
+        console.log(err);
+        history.push("/");
+      }
+    } else {
+      history.push("/");
+    }
+  };
+
+
+
+
+
+
+
 // Test for BookingPage.js
 
 import React, { useEffect, useState } from "react";
