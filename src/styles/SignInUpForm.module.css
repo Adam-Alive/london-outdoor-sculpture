@@ -5,7 +5,8 @@
   .Form {
     background-color: rgb(100, 117, 100);
     padding: 10px;
-    border-radius: 2px;  
+    border-radius: 2px;
+    border: 1px solid black;
   }
 
    .Input {
@@ -16,7 +17,7 @@
     color: #7177a1;
     text-align: center;
     padding: 10px;
-  }
+   }
   
   .Header {
     font-style: normal;
@@ -29,13 +30,13 @@
   }
   
   .Link {
-    background-color: #ffffff;;
     text-decoration: none;
     text-align: center;
     display: block;
     margin: auto;
+    color: #ffffff;
   }
-  
+
   .Link span {
     color: #ff9254;
     font-weight: 600;

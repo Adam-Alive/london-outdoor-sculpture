@@ -113,7 +113,7 @@ const SignUpForm = () => {
               </Alert>
             ))}
           </Form>
-          <Link className={`mt-3 ${styles.Link} ${styles.Form}`} to="/signin">
+          <Link className={`mt-3 ${styles.Link}`} to="/signin">
             Already have an account? <span>Sign in</span>
           </Link>      
         </Container>

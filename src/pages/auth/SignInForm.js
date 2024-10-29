@@ -98,7 +98,7 @@ function SignInForm () {
               </Alert>
             ))}
           </Form> 
-          <Link className={`mt-3 ${styles.Link} ${styles.Form}`} to="/signup">
+          <Link className={`mt-3 ${styles.Link}`} to="/signup">
             Don't have an account? <span>Sign up now!</span>
           </Link>
         </Container>
