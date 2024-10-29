@@ -1,12 +1,11 @@
 .Row {
-    height: calc(100vh - 81px);
+    height: calc(100vh - 81px);   
   }
 
   .Form {
     background-color: rgb(100, 117, 100);
     padding: 10px;
-    border-radius: 2px;
-    border: 1px solid #dadadf;
+    border-radius: 2px;  
   }
 
    .Input {
