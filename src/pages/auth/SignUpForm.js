@@ -48,12 +48,11 @@ const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2 mx-auto" md={6}>
-        <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign up</h1>
-
+        <Container className={`${styles.Form} p-4 `}>
+          <h1 className={styles.Header}>Sign up</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">username</Form.Label>
+              <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="text"
@@ -115,12 +114,9 @@ const SignUpForm = () => {
               </Alert>
             ))}
           </Form>
-        </Container>
-
-        <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
+          <Link className={`mt-3 ${styles.Link} ${styles.Form}`} to="/signin">
             Already have an account? <span>Sign in</span>
-          </Link>
+          </Link>      
         </Container>
       </Col>
     </Row>

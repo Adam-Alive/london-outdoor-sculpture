@@ -15,7 +15,7 @@ import NoResults from "../../assets/no-results.png";
 
 function Bookings() {
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
+  // const is_owner = currentUser?.username === owner;
   const { id } = useParams();
   const history = useHistory();
   
@@ -45,7 +45,7 @@ function Bookings() {
     <Container className={styles.Content}>
       <h3>My Bookings</h3>
       <br />      
-        {is_owner && hasLoaded ? (
+        {hasLoaded ? (
           <>
             {bookings.results.length ? (
               bookings.results.map((booking) => (
