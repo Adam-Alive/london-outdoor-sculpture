@@ -7,12 +7,19 @@
 
   .NavLink {
     padding: 5px;
+    color: #131313;
+  }
+
+  i {
+    color: #131313;
   }
   
   .Active i {
-    color: #6c95ec;
+    /* color: #6c95ec; */
+    color: #ff9254;
   }
 
-  h4 {
+ h4 {
     font-weight: 600;
   }
+
