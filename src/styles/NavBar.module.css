@@ -14,12 +14,16 @@
     color: #131313;
   }
   
-  .Active i {
-    /* color: #6c95ec; */
+  i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #ff9254;
+  }
+
+  .Active i {  
     color: #ff9254;
   }
 
  h4 {
     font-weight: 600;
   }
-
