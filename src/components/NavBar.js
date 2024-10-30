@@ -105,8 +105,10 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="80" />
-            {/* <h4 className="d-none d-md-inline p-3">London Outdoor Sculpture</h4> */}
+            <img src={logo} alt="logo" height="80" />           
+              <span className={styles.SpanA}>London</span>
+              <span className={styles.SpanB}>Outdoor</span>
+              <span className={styles.SpanC}>Sculpture</span>         
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}

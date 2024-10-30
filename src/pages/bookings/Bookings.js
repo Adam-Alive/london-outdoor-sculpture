@@ -15,7 +15,6 @@ import NoResults from "../../assets/no-results.png";
 
 function Bookings() {
   const currentUser = useCurrentUser();
-  // const is_owner = currentUser?.username === owner;
   const { id } = useParams();
   const history = useHistory();
   
@@ -23,13 +22,12 @@ function Bookings() {
   const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
-    const fetchBookings = async () => {
-      // console.log(currentUser?.profile_id)
+    const fetchBookings = async () => {  
         try {
           const { data } = await axiosReq.get(`/bookings/?owner__profile=${currentUser?.profile_id}`);
           setBookings(data);
           setHasLoaded(true);
-          console.log(data);
+          // console.log(data);
         } catch (err) {
           console.log(err);
         } 

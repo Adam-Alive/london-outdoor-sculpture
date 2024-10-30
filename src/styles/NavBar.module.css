@@ -24,6 +24,25 @@
     color: #ff9254;
   }
 
- h4 {
-    font-weight: 600;
+  .SpanA {   
+    font-size: .8em;
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    
+  }
+
+  .SpanB {    
+    font-size: .8em;
+    position: relative;
+    right: 49px;
+    
+  }
+
+  .SpanC {    
+    font-size: .8em;
+    position: relative;
+    top: 30px;
+    right: 113px;
+    
   }
