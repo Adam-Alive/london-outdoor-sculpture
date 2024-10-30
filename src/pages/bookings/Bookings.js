@@ -24,18 +24,15 @@ function Bookings() {
 
   useEffect(() => {
     const fetchBookings = async () => {
-      if (currentUser?.profile_id?.toString() === id) {
+      // console.log(currentUser?.profile_id)
         try {
-          const { data } = await axiosReq.get(`/bookings/?owner__profile=${id}`);
+          const { data } = await axiosReq.get(`/bookings/?owner__profile=${currentUser?.profile_id}`);
           setBookings(data);
           setHasLoaded(true);
           console.log(data);
         } catch (err) {
           console.log(err);
         } 
-      } else {
-        history.push("/");
-      }
       };
     setHasLoaded(false);
     fetchBookings(); 
