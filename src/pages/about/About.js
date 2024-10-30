@@ -9,8 +9,7 @@ const About = () => {
     <br />
     <h4>
       All are welcome to view, join and upload images of outdoor sculpture in the Greater London area.
-    </h4>
-    {/* <br /> */}
+    </h4>    
     <h5>
       Just three rules:
     </h5>

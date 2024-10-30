@@ -1,18 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import styles from "../styles/Footer.module.css"
 
 const Footer = () => {
   return (
     <footer>
-        <Container fluid>
-            <Row className={styles.Row}>
-                <NavLink to="/">                
-                </NavLink>                
-                Footer Section
-            </Row>
+        <Container fluid className={styles.Content}> 
+          <p className={styles.FooterPa}>London Outdoor Sculpture</p>
+          <p className={styles.FooterPb}>© 2024 for educational purposes</p> 
         </Container>
     </footer>
   )

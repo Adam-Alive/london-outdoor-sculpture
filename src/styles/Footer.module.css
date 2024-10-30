@@ -1,7 +1,17 @@
-.Row {
-    background-color: #647564;
-    color: #131313;
+.Content {
+    background-color: #647564;      
+    height: 114px;    
     text-align: center;
-    height: 104px;
-    margin-top: 104px;
+    border: 1px solid black;
+}
+
+.FooterPa {
+    color: #131313;
+    font-size: 1.3em;
+    font-weight: 700;  
+    padding-top: 20px;
+}
+
+.FooterPb {
+    color: #131313;    
 }
