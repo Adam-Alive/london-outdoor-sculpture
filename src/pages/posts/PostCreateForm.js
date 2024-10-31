@@ -104,7 +104,7 @@ function PostCreateForm() {
       </Form.Group>
       {errors?.artist?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
-          {message}
+          Entry required - use 'unkown' if necessary.
         </Alert>
       ))}
 
@@ -119,7 +119,7 @@ function PostCreateForm() {
       </Form.Group>
       {errors?.street?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
-          {message}
+          Entry required - use 'unkown' if necessary.
         </Alert>
       ))}
 
@@ -134,7 +134,7 @@ function PostCreateForm() {
       </Form.Group>
       {errors?.postcode?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
-          {message}
+          Entry required - use 'unkown' if necessary.
         </Alert>
       ))}
 
@@ -149,7 +149,7 @@ function PostCreateForm() {
       </Form.Group>
       {errors?.borough?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
-          {message}
+          Entry required - use 'unkown' if necessary.
         </Alert>
       ))}
     
