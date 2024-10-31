@@ -7,7 +7,7 @@ import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/TalksPage.module.css";
 
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Talk from "./Talk";
 import NoResults from "../../assets/no-results.png";
@@ -44,7 +44,7 @@ function TalksPage() {
       <h3>Online Talks</h3>
       <br />
       <h5>All are welcome to join our monthly online talks with guest speakers covering the many themes relating to public sculpture across London.</h5>
-      <h5>Please sign-up to register for any talk.</h5>
+      <h5>Please <Link className={styles.TalksLink} to="/signin">sign-in </Link>to register for any talk.</h5>
         {hasLoaded ? (
           <>
             {talks.results.length ? (
