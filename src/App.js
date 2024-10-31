@@ -20,6 +20,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import About from "./pages/about/About";
+import NotFound from "./components/NotFound";
 
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
               <Route exact path="/bookings/:id" render={() => <Bookings />} />
               <Route exact path="/bookings/:id/edit" render={() => <BookingEditForm />} />
               <Route exact path="/about/" render={() => <About /> } />
-              <Route render={() => <p>Page not found!</p>} />
+              <Route render={() => <NotFound />} />
             </Switch>
           </Container>
           <Footer />
