@@ -7,14 +7,18 @@ import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/TalksPage.module.css";
 
+import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Talk from "./Talk";
 import NoResults from "../../assets/no-results.png";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function TalksPage() {
   const [talks, setTalks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const fetchTalks = async () => {
@@ -27,8 +31,13 @@ function TalksPage() {
       }
     };
     setHasLoaded(false);
-    fetchTalks(); 
-  }, []);
+    const timer = setTimeout(() => {
+      fetchTalks();
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };    
+  }, [pathname]);
 
   return (
     <Container className={styles.Content}>
@@ -39,9 +48,15 @@ function TalksPage() {
         {hasLoaded ? (
           <>
             {talks.results.length ? (
-              talks.results.map((talk) => (
-                <Talk key={talk.id} {...talk} setTalks={setTalks} />
-              ))
+              <InfiniteScroll
+                children={talks.results.map((talk) => (
+                  <Talk key={talk.id} {...talk} setTalks={setTalks} />
+                ))}
+                dataLength={talks.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!talks.next}
+                next={() => fetchMoreData(talks, setTalks)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} />
