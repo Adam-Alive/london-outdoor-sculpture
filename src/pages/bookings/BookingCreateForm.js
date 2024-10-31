@@ -29,8 +29,7 @@ function BookingCreateForm() {
     questions: "",
     suggestions: "",
   });
-  const { title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;
-  console.log(bookingData)
+  const { title, speaker, date, start_time, end_time, summary, questions, suggestions } = bookingData;  
 
   const history = useHistory();
 
@@ -53,17 +52,12 @@ function BookingCreateForm() {
     formData.append("summary", summary);
     formData.append("questions", questions);
     formData.append("suggestions", suggestions);
-
-    // Delete after REQUEST is successful
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
-    
+      
     try {
       const { data } = await axiosReq.post("/bookings/", formData);
       history.push(`/bookings/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

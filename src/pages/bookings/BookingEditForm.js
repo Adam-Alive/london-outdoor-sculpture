@@ -40,7 +40,7 @@ function BookingEditForm() {
 
         is_owner ? setBookingData({ title, speaker, date, start_time, end_time, summary, questions, suggestions }) : history.push("/");
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -65,18 +65,13 @@ function BookingEditForm() {
     formData.append("end_time", end_time);
     formData.append("summary", summary);
     formData.append("questions", questions);
-    formData.append("suggestions", suggestions);
-
-    // Delete after REQUEST is successful
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
+    formData.append("suggestions", suggestions);   
     
     try {
       await axiosReq.put(`/bookings/${id}/`, formData);
       history.push(`/bookings/${id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

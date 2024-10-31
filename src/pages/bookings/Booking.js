@@ -42,7 +42,7 @@ const Booking = (props) => {
             results: bookings.results.filter((booking) => booking.id !== id),
           });
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       }
     }
