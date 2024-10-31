@@ -14,10 +14,12 @@ import NoResults from "../../assets/no-results.png";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function Bookings() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
+  useRedirect('loggedOut');
    
   const [bookings, setBookings] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
