@@ -20,7 +20,7 @@ const About = () => {
       </li>
       <li>
       All sculptures must be outdoors, in a public space, and freely available to all. They may be on permanent or temporary display. <br />  
-      Sculptures inside railway stations are acceptable &ndash; Paddington fans take note.
+      Sculptures inside railway stations are acceptable &ndash; Paddington fans take note!
       </li>
       <li>
       We define "sculpture" as a three-dimensional object in any medium.
@@ -30,17 +30,17 @@ const About = () => {
       Guidelines:
     </h5>   
     <p>
-      When adding an image, please try to include as much information as you can so that others may visit a sculpture if they wish:
+      Please include as much of the following information as you can:
     </p>
     <ul>
       <li>
         Title and artist.
       </li>
       <li>
-         Street name &ndash; have a look around!
+         Street name.
       </li>
       <li>
-        The first part of the postcode eg. W10, SW15 &ndash; you may find this on a street sign nearby.
+        First part of the postcode eg. W10, SW15 &ndash; you may find this on a street sign nearby.
       </li>
       <li>
         Name of the borough eg. Lambeth, Westminster, Brent etc.
