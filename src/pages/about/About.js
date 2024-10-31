@@ -7,9 +7,9 @@ const About = () => {
     <Container className={styles.Content}>
     <h3>About Us</h3>
     <br />
-    <h4>
+    <h5>
       All are welcome to view, join and upload images of outdoor sculpture in the Greater London area.
-    </h4>    
+    </h5>    
     <h5>
       Just three rules:
     </h5>
