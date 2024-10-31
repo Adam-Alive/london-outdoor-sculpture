@@ -7,19 +7,24 @@ import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/Bookings.module.css";
-
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
+import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Booking from './Booking';
 import NoResults from "../../assets/no-results.png";
+
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function Bookings() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const history = useHistory();
-  
+   
   const [bookings, setBookings] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const fetchBookings = async () => {  
@@ -33,8 +38,13 @@ function Bookings() {
         } 
       };
     setHasLoaded(false);
-    fetchBookings(); 
-  }, [currentUser?.profile_id, history, id]);
+    const timer = setTimeout(() => {
+      fetchBookings(); 
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };    
+  }, [currentUser?.profile_id, history, id, pathname]);
 
   return (
     <Container className={styles.Content}>
@@ -43,9 +53,15 @@ function Bookings() {
         {hasLoaded ? (
           <>
             {bookings.results.length ? (
-              bookings.results.map((booking) => (
-                <Booking key={booking.id} {...booking} setBookings={setBookings} bookings={bookings} />
-              ))
+              <InfiniteScroll              
+                children={bookings.results.map((booking) => (
+                  <Booking key={booking.id} {...booking} setBookings={setBookings} bookings={bookings} />
+                ))}
+                dataLength={bookings.results.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!bookings.next}
+                  next={() => fetchMoreData(bookings, setBookings)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} />
