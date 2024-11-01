@@ -97,8 +97,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page.
 - As an administrator, I would like to edit and delete an Online Talk event so that I can amend details and remove the event if necessary.
 - As a user, I would like to view all Online Talk events so that I can browse upcoming Online Talks.
-- As a logged-in user, I would like to submit a booking for an Online Talk event so that I can attend and engage with other users.
-- As a logged-in user, I would like to make suggestions for topics at future Online Talk events so that I can learn more about my areas of interest.
+- As a logged-in user, I would like to submit a booking for an Online Talk event so that I can learn about my areas of interest.
 - As a logged-in user, I would like to view, edit and delete my bookings for Online Talk events so that I can check and change my bookings if necessary.
 
 ### Epic 8: Site Administration
@@ -229,7 +228,7 @@ I also used the MoSCow prioritisation model to add labels to my user stories wit
 
 - **Must Have**: guaranteed to be delivered.
 - **Should Have**: adds significant value, but not vital.
-- **Could Have**: has small impact if left out.
+- **Could Have**: has small impact if left out (and not included for the purposes of this project).
 - **Won't Have**: not a priority for this iteration (and not included for the purposes of this project).
 
 **A summary of open and closed issues can be accessed via these tabs:**
