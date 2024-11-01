@@ -89,7 +89,7 @@ function PostCreateForm() {
       </Form.Group>
       {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
-          {message}
+          Entry required - use 'unkown' if necessary.
         </Alert>
       ))}
 
@@ -208,7 +208,7 @@ function PostCreateForm() {
             </Form.Group>
             {errors?.image?.map((message, idx) => (
               <Alert variant="warning" key={idx}>
-                {message}
+                Please use a recognised image file format.
               </Alert>
             ))}
             
