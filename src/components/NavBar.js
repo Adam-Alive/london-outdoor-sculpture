@@ -35,7 +35,8 @@ const NavBar = () => {
     >
       <i className="far fa-plus-square"></i>Add image
       </NavLink>
-  )  
+  )
+
   const loggedInIcons = (
     <>
       <NavLink
@@ -79,8 +80,8 @@ const NavBar = () => {
       </NavLink>
     </>
   );
-  const loggedOutIcons = (
-  <>
+  const loggedOutIcons = (  
+  <>       
       <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
@@ -104,7 +105,7 @@ const NavBar = () => {
     <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
       <Container>
         <NavLink to="/">
-          <Navbar.Brand>
+          <Navbar.Brand className={styles.NavbarBrand}>
             <img src={logo} alt="logo" height="80" />           
               <span className={styles.SpanA}>London</span>
               <span className={styles.SpanB}>Outdoor</span>

@@ -5,6 +5,11 @@
     font-weight: 600;
   }
 
+  .NavbarBrand {
+    width: 170px;
+   
+  }
+
   .NavLink {
     padding: 5px;
     color: #131313;
