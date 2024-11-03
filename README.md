@@ -175,13 +175,14 @@ The following features would add to the user experience:
 - [Git](https://git-scm.com) for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) for secure online code storage.
 - [Gitpod](https://gitpod.io) as a cloud-based IDE for development.
-- [HTML](https://en.wikipedia.org/wiki/HTML) for the main site content.
-- [CSS](https://en.wikipedia.org/wiki/CSS) for the main site design and layout.
+- [HTML](https://en.wikipedia.org/wiki/HTML) for site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) for site design and layout.
 - [React](https://react.dev/) for front-end user interface.
 - [Python](https://www.python.org) for back-end programming.
 - [Heroku](https://www.heroku.com) for hosting the deployed back-end site.
 - [React Bootstrap](https://react-bootstrap.netlify.app/) for the front-end CSS styling.
 - [Django](https://www.djangoproject.com) as the Python framework for the site.
+- [Dango Rest Framework](https://www.django-rest-framework.org) for building the back-end API.
 - [PostgreSQL](https://www.postgresql.org) for relational database management.
 - [Neon](https://neon.tech/) to host the PostgreSQL database.
 - [Cloudinary](https://cloudinary.com) for online static file storage.
@@ -208,30 +209,20 @@ Using GitHub's projects and issues framework I created two GitHub projects withi
 - [Sculpture Development and Testing](https://github.com/users/Adam-Alive/projects/10)
 - [Sculpture User Stories](https://github.com/users/Adam-Alive/projects/9)
 
-I created a **User Story Template** to manage user stories and provide here an example of a completed issue:
+I created a user story template to manage user stories and provide here an example of a completed issue:
 
 ![Sample User Story](documentation/testing/sample.png)
 
-Progress on each user story was tracked on a weekly basis with overall project progress monitored on the milestones board, as shown below, where a list of closed and open milestones can be seen:
-
-**Closed at the time of writing:**
-
-![Milestones](documentation/testing/milestones-closed.png)
-
-**Open at the time of writing:**
-
-![Milestones](documentation/testing/milestones-open.png)
-
 ### MoSCoW Prioritisation
 
-I also used the MoSCow prioritisation model to add labels to my user stories within the issues tab:
+I used the MoSCow prioritisation model to add labels to my user stories within the issues tab:
 
 - **Must Have**: guaranteed to be delivered.
 - **Should Have**: adds significant value, but not vital.
 - **Could Have**: has small impact if left out (and not included for the purposes of this project).
 - **Won't Have**: not a priority for this iteration (and not included for the purposes of this project).
 
-**A summary of open and closed issues can be accessed via these tabs:**
+### Summary of closed issues:
 
 - [![GitHub issues](https://img.shields.io/github/issues/Adam-Alive/london-outdoor-sculpture)](https://github.com/Adam-Alive/london-outdoor-sculpture/issues)
 
