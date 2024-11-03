@@ -396,5 +396,5 @@ To fork this repository, follow these steps:
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Martina Terlevic ](https://github.com/SephTheOverwitch), for her guidance and support throughout the development of this project.
+- I would like to thank my Code Institute mentor, Mitko Bachvarov, for his guidance and support throughout the development of this project.
 
