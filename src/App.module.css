@@ -36,7 +36,7 @@
   }
   
   a:hover i {
-    color: #6c95ec;
+    color: #ff9254;
     transition: color ease-in-out 0.3s;
   }
   
@@ -50,14 +50,13 @@
   i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: #6c95ec;
+    color: #ff9254;
   }
 
   input[type="file"] {
     display: none;
 }
 
-/* Check ALL order below before end */
 figure {
   text-align: center;
   display: inline-block;
@@ -69,16 +68,16 @@ figure {
   width: 100%;
 }
 
-  /* scrollbar */
-  *::-webkit-scrollbar {
-    width: 5px;
-  }
-  *::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  *::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  *::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+/* scrollbar */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

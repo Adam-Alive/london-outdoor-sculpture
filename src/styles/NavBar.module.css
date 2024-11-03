@@ -19,7 +19,7 @@
     color: #131313;
   }
   
-  i:hover {
+  .NavLink:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
     color: #ff9254;
