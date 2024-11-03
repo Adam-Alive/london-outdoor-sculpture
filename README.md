@@ -28,8 +28,7 @@ I present here the primary wireframes for all pages on small screens with releva
 
 Design and colour should enhance, not distract, so I wanted to adopt a clean and simple design with a primarily white background, and colour for the header and footer, thus allowing the images to be the focus.
 
-The themes of 'outdoor' and 'sculpture' inspired the ideas of 'green' and 'stone' so I explored shades of green and decided for a subtle matte green. Black and orange were adopted for the Nav Bar icons 
-
+The themes of 'outdoor' and 'sculpture' inspired the ideas of 'green' and 'stone' so I explored shades of green and decided for a subtle matte. Black and orange were adopted for the Nav Bar icons to contrast with the green for reasons of aesthetics and accessibility.
 
 I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator to select colours, and their use is summarised below:
 
@@ -37,7 +36,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - `rgb(19, 19, 19)` used for Nav Bar icons and footer text.
 - `rgb(255, 146, 84)` used for Nav Bar icons on-hover.
 - `rgb(241, 241, 241)` used for body background.
-- `rgb(100, 117, 100)` used for Nav Bar and footer background.
+- `rgb(100, 117, 100)` used for header and footer background.
 - [React Bootstrap](https://react-bootstrap.github.io/docs/components/buttons) used for buttons.
 
 ### Typography
