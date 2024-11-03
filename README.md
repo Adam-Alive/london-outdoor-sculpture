@@ -1,4 +1,4 @@
-# [London Outdoor Sculpture] (https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/)
+# [London Outdoor Sculpture](https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/)
 
 ## Project Purpose
 
@@ -17,8 +17,7 @@ There are two target groups:
 
 - People of all ages who want to view images of outdoor sculpture or register and interact with other users without necessarily uploading images.
 
-
-![screenshot](documentation/features/)
+![screenshot](documentation/images/screens.png)
 
 ## UX
 ### Initial Design and Wireframes
@@ -27,17 +26,19 @@ I present here the primary wireframes for all pages on small screens with releva
 
 ### Colour Scheme
 
-Design and colour should enhance, not distract, so I wanted to adopt a clean and simple design with pastel-shade colours on a primarily white background, thus allowing the images to be the focus.
+Design and colour should enhance, not distract, so I wanted to adopt a clean and simple design with a primarily white background, and colour for the header and footer, thus allowing the images to be the focus.
 
-I therefore chose a 
+The themes of 'outdoor' and 'sculpture' inspired the ideas of 'green' and 'stone' so I explored shades of green and decided for a subtle matte green. Black and orange were adopted for the Nav Bar icons 
 
-Black, blue and green text were chosen to provide variety and a clear contrast with the white background.
 
 I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator to select colours, and their use is summarised below:
 
-- `rgb()` used for primary text.
-- `rgb()` used for header, footer and primary buttons.
-- `rgb()` used for onscreen messages, button-hover and secondary buttons.
+- `rgb(33, 37, 41)` used for primary text.
+- `rgb(19, 19, 19)` used for Nav Bar icons and footer text.
+- `rgb(255, 146, 84)` used for Nav Bar icons on-hover.
+- `rgb(241, 241, 241)` used for body background.
+- `rgb(100, 117, 100)` used for Nav Bar and footer background.
+- [React Bootstrap](https://react-bootstrap.github.io/docs/components/buttons) used for buttons.
 
 ### Typography
 
@@ -211,7 +212,7 @@ Using GitHub's projects and issues framework I created two GitHub projects withi
 
 I created a user story template to manage user stories and provide here an example of a completed issue:
 
-![Sample User Story](documentation/testing/sample.png)
+![Sample User Story](documentation/images/closed-issue.png)
 
 ### MoSCoW Prioritisation
 
@@ -234,9 +235,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-**IMPORTANT:**
-
-The live application is deployed on Heroku at: [Heroku](https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/).
+The live application is deployed on Heroku at: [London Outdoor Sculpture](https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/).
 
 ### PostgreSQL Database
 
