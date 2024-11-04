@@ -19,6 +19,7 @@ I used the [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to valida
 An example of a test for About.module.css is shown here, with full results listed below.
  
 ![screenshot](documentation/images/css-1.png)
+
 ![screenshot](documentation/images/css-2.png) 
 
  | Filename | Result |
@@ -31,13 +32,13 @@ An example of a test for About.module.css is shown here, with full results liste
 |Bookings.module.css | Pass|
 |Button.module.css| Pass|
 |Comment.module.css | Pass|
-| CommentCreateEditForm. module.css| Pass|
+| CommentCreateEditForm.module.css| Pass|
 |Footer.module.css |Pass |
 |MoreDropdown.module.css |Pass |
 |NavBar.module.css |Pass |
 |NotFound.module.css | Pass|
 |Post.module.css | Pass|
-|PostCreateEditForm.module.css | |
+|PostCreateEditForm.module.css |Pass |
 |PostsPage.module.css |Pass |
 |Profile.module.css | Pass|
 |SignInUpForm.module.css |Pass |
@@ -113,9 +114,14 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
  |  As a site administrator, I would like to approve or delete images added to the gallery so that I can filter out any objectionable material.| ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)|
  |  As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues. | ![screenshot](documentation/features/.png)  ![screenshot](documentation/features/.png)|
   
- ## Automated Testing
-  
- I conducted a series of automated tests on my application and acknowledge that, in a real-world scenario, an extensive set of additional tests would be required.
+ ## React Unit Testing
+
+ I conducted a series of automated tests on the NavBar.js component (see: [NavBar.test.js](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/src/components/__tests__/NavBar.test.js)) and acknowledge that, in a real-world scenario, an extensive set of additional tests would be required.
+
+ - Result: Pass, no errors:
+
+ ![screenshot](documentation/images/navbar-test.png)
+ 
  
  ## Bugs
  
