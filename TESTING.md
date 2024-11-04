@@ -16,19 +16,25 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
  
  ![screenshot](documentation/validation/css.png) 
  
-### JavaScript TBC!!!!!!!!!!!
+### JSX
+
+All JSX code was passed through [ESLint](https://eslint.org/), installed in my Gitpod workspace and providing real-time validation. 
+
+- Result: Pass, no errors:
+ 
+ ![screenshot](documentation/images/eslint.png) 
 
 
 ## Browser Compatibility
 I've tested my deployed project on Chrome, Edge and Safari to check for compatibility issues.
  
-I tested each browser on the homepage, and then logged in to view each feature. I have provided a summary of these tests below with a screenshot of the homepage or gallery.
+I tested each browser on the homepage, and then logged in to view each feature. I have provided a summary of these tests below with a screenshot of the homepage.
  
-| Browser | Home/Gallery | Notes |
+| Browser | Home | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](documentation/screens/chrome.png) | Works as expected |
-| Edge | ![screenshot](documentation/screens/edge.png) | Works as expected |
-| Safari | ![screenshot](documentation/screens/safari.png) | Works as expected |
+| Chrome | ![screenshot](documentation/images/chrome.png) | Works as expected |
+| Edge | ![screenshot](documentation/images/edge.png) | Works as expected |
+| Safari | ![screenshot](documentation/images/safari.png) | Works as expected |
  
 ## Responsiveness
  
@@ -40,14 +46,14 @@ I deployed the project early on and tested on three of my own devices throughout
  
 I also used Dev Tools to test on a tablet device.
  
-I tested the responsiveness of the homepage and each stage of the game and have provided a summary of these tests below with a screenshot of the home or faqs page:
+I tested the responsiveness of each page and have provided a summary of these tests below with a screenshot of the homepage:
  
-| Device | Home/Gallery/Faqs | Notes |
+| Device | Home | Notes |
 | --- | --- | --- |
-| Moto(g8) mobile (own) | ![screenshot](documentation/screens/phone.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/screens/tablet.png) | Works as expected |
-| MacBook Air (own) | ![screenshot](documentation/screens/apple.jpg) | Works as expected |
-| HP Desktop (own) | ![screenshot](documentation/screens/hp.jpg) | Works as expected |
+| Moto(g8) mobile (own) | ![screenshot](documentation/images/phone.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/images/ipad.png) | Works as expected |
+| MacBook Air (own) | ![screenshot](documentation/images/laptop.jpg) | Works as expected |
+| HP Desktop (own) | ![screenshot](documentation/images/hp.jpg) | Works as expected |
  
 ## Lighthouse Audit
  
