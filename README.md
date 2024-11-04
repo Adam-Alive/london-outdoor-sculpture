@@ -37,7 +37,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - `rgb(255, 146, 84)` used for Nav Bar icons on-hover.
 - `rgb(241, 241, 241)` used for body background.
 - `rgb(100, 117, 100)` used for header and footer background.
-- [React Bootstrap](https://react-bootstrap.github.io/docs/components/buttons) used for buttons.
+- [React Bootstrap](https://react-bootstrap.github.io/docs/components/buttons) buttons component used for colouring and functionality.
 
 ### Typography
 
@@ -113,7 +113,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
     - Displays the nav bar, search bar, posts and most followed user profiles.
     - A post comprises an image with title, artist, street, post code and borough, along with the number of likes and comments.
     - Users can enter key words in the search bar to locate posts by title, artist, street, post code and borough, along with profile name.
-    - Clicking on a users avatar redirects to the profile page.
+    - Clicking on a user's avatar redirects to the profile page.
 
 ![screenshot](documentation/features/home-1.png)
 
@@ -152,7 +152,6 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
     -  Any user can search by keyword for user, artist, post code, borough etc.
 
 ![screenshot](documentation/features/search.png)
-
 
 - **Profile Page**
 
