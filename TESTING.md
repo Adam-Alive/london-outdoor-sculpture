@@ -102,16 +102,16 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
 **Epic 1: Authentication**
 | User Story | Screenshot |
 | --- | --- |
-|As a new user, I would like to create an account so that I can access all the features for signed-up users. |![screenshot](documentation/testing/.png)  |
-| As a user, I would like to sign in so that I can access functionality for signed-in users. |  ![screenshot](documentation/testing/.png)|
-|  As a user, I would like to know if I am signed-in or not so that I can sign in if necessary. |![screenshot](documentation/testing/.png)  |
-|  As a user, I would like to sign out so that I know my session has been closed securely. | ![screenshot](documentation/testing/.png) |
+|As a new user, I would like to create an account so that I can access all the features for signed-up users. |![screenshot](documentation/testing/signup.png)  |
+| As a user, I would like to sign in so that I can access functionality for signed-in users. |  ![screenshot](documentation/testing/signin.png)|
+|  As a user, I would like to know if I am signed-in or not so that I can sign in if necessary. |![screenshot](documentation/testing/logged-in.png)  |
+|  As a user, I would like to sign out so that I know my session has been closed securely. | ![screenshot](documentation/testing/signout-1.png)  ![screenshot](documentation/testing/signout-2.png)|
 
 **Epic 2: Navigation**
 | User Story | Screenshot |
 | --- | --- |
-| As a user, I would like to view a navbar from every page so that I can navigate seamlessly between pages. | ![screenshot](documentation/testing/.png) |
-|  As a signed-out user, I would like to see sign-in and signup options so that I can sign in/sign up. | ![screenshot](documentation/testing/.png) |
+| As a user, I would like to view a navbar from every page so that I can navigate seamlessly between pages. | ![screenshot](documentation/testing/navbar-1.png) |
+|  As a signed-out user, I would like to see sign-in and signup options so that I can sign in/sign up. | ![screenshot](documentation/testing/navbar-2.png) |
 
 **Epic 3: Add and Like Posts**
 | User Story | Screenshot |
