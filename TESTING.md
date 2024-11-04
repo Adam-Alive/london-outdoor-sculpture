@@ -96,23 +96,75 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
 | Network| ![screenshot](documentation/screens/m-network.png) | ![screenshot](documentation/screens/d-network.png) |
 | Logout | ![screenshot](documentation/screens/m-logout.png) | ![screenshot](documentation/screens/d-logout.png) |
 
- ## User Story Testing
-  
+ ## User Story Testing  
  I conducted manual tests for user stories and a summary is provided below:
-  
- | User Story | Screenshot |
- | --- | --- |
- | As a new user, I would like to land on an informative and engaging home page so that I can learn about the club.| ![screenshot](documentation/features/.png) |
- |  As a new user, I would like to submit my contact details so that I can register my membership. | ![screenshot](documentation/features/.png) |
- |  As a member, I would like to enter my login details so that I can access the members' area. | ![screenshot](documentation/features/login.png) |
- |  As a member, I would like to logout so that I can know my session has been closed securely. | ![screenshot](documentation/features/logout-1.png) ![screenshot](documentation/features/logout-2.png) |
- |  As a member, I would like to book a practice session so that I can attend at a time that suits me. | ![screenshot](documentation/features/.png) |
- |  As a member, I would like to amend or cancel a practice session so that I can change my plans. | ![screenshot](documentation/features/.png) |
- |  As a member, I would like to add images to the gallery so that I can share my curling experiences with other members. | ![screenshot](documentation/features/.png)  ![screenshot](documentation/features/.png) |
- | As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages. | ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)  |
- |  As a site administrator, I would like to manage content on the FAQs page so that I can provide information to members.| ![screenshot](documentation/features/faqs-1.png) ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)|
- |  As a site administrator, I would like to approve or delete images added to the gallery so that I can filter out any objectionable material.| ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)|
- |  As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues. | ![screenshot](documentation/features/.png)  ![screenshot](documentation/features/.png)|
+
+**Epic 1: Authentication**
+| User Story | Screenshot |
+| --- | --- |
+|As a new user, I would like to create an account so that I can access all the features for signed-up users. |![screenshot](documentation/testing/.png)  |
+| As a user, I would like to sign in so that I can access functionality for signed-in users. |  ![screenshot](documentation/testing/.png)|
+|  As a user, I would like to know if I am signed-in or not so that I can sign in if necessary. |![screenshot](documentation/testing/.png)  |
+|  As a user, I would like to sign out so that I know my session has been closed securely. | ![screenshot](documentation/testing/.png) |
+
+**Epic 2: Navigation**
+| User Story | Screenshot |
+| --- | --- |
+| As a user, I would like to view a navbar from every page so that I can navigate seamlessly between pages. | ![screenshot](documentation/testing/.png) |
+|  As a signed-out user, I would like to see sign-in and signup options so that I can sign in/sign up. | ![screenshot](documentation/testing/.png) |
+
+**Epic 3: Add and Like Posts**
+| User Story | Screenshot |
+| --- | --- |
+|  As a logged-in user, I would like to create a post to share on the platform so that I can engage with other users. |  ![screenshot](documentation/testing/.png)|
+| As a logged-in user, I would like to edit my posts so that I can change or update them after their creation. |![screenshot](documentation/testing/.png)  |
+|  As a logged-in user, I would like to like/unlike a post so that I can show my appreciation of the content. | ![screenshot](documentation/testing/.png) |
+|   As a logged-in user, I would like to view all posts I have liked so that I can scroll through my favourite content. |  ![screenshot](documentation/testing/.png) |
+
+**Epic 4: View Posts**
+| User Story | Screenshot |
+| --- | --- |
+|   As a user, I would like to scroll continuously through the posts on any given page so that I can view them without interruption. | ![screenshot](documentation/testing/.png)  |
+|  As a user, I would like to view the most recent posts first so that I am up to date with the latest content. | ![screenshot](documentation/testing/.png) |
+|   As a user, I would like to search for posts with keywords so that I can find posts and user profiles that most interest me. |  ![screenshot](documentation/testing/.png) |
+|  As a user, I would like to view the details of a single post so that I can learn more about it. |![screenshot](documentation/testing/.png)  |
+|  As a logged-in user, I would like to view posts filtered by users I follow so that I can keep up-to-date with their content. | ![screenshot](documentation/testing/.png) |
+
+**Epic 5: Profiles**
+| User Story | Screenshot |
+| --- | --- |
+| As a user, I would like to view other users’ profiles so that I can see their posts and learn more about them. | ![screenshot](documentation/testing/.png) |
+| As a user, I would like to view a list of the most followed profiles so that I can see which are the most popular. |![screenshot](documentation/testing/.png)  |
+|  As a user, I would like to see all the published posts by a specific user so that I can review their post history. | ![screenshot](documentation/testing/.png) |
+|   As a logged-in user, I would like to follow/unfollow other users so that I can see and remove posts by specific users in my post feed. |  ![screenshot](documentation/testing/.png) |
+|  As a logged-in user, I would like to edit my profile so that I can keep my details up to date. |![screenshot](documentation/testing/.png)  |
+|  As a logged-in user, I would like to update my username/password so that I can make changes and keep my account secure. | ![screenshot](documentation/testing/.png) |
+|  As a user, I would like to see stats on a specific user’s profile so I can know how many posts they have made, followers they have, and how many users they are following. | ![screenshot](documentation/testing/.png) |
+
+**Epic 6: Comments**
+| User Story | Screenshot |
+| --- | --- |
+|  As a user, I would like to view comments by other users so that I can know what they think about posts. |![screenshot](documentation/testing/.png)  |
+|   As a user, I would like to see how long ago a comment was made so that I know how old it is. | ![screenshot](documentation/testing/.png) |
+|  As a logged-in user, I would like to comment on a post so that I can share my thoughts about its content. | ![screenshot](documentation/testing/.png) |
+|   As a logged-in user, I would like to edit any comment I have made so that I can update its content. |  ![screenshot](documentation/testing/.png)|
+|   As a logged-in user, I would like to delete any comment I have made so that I can remove it from the site. | ![screenshot](documentation/testing/.png) |
+
+**Epic 7: Online Talk Events**
+| User Story | Screenshot |
+| --- | --- |
+|   As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page. | ![screenshot](documentation/testing/.png) |
+|   As an administrator, I would like to edit and delete an Online Talk event so that I can amend details and remove the event if necessary. |![screenshot](documentation/testing/.png)  |
+|   As a user, I would like to view all Online Talk events so that I can browse upcoming Online Talks. | ![screenshot](documentation/testing/.png) |
+|   As a logged-in user, I would like to submit a booking for an Online Talk event so that I can learn about my areas of interest. | ![screenshot](documentation/testing/.png) |
+|   As a logged-in user, I would like to view, edit and delete my bookings for Online Talk events so that I can check and change my bookings if necessary. |  ![screenshot](documentation/testing/.png)|
+
+**Epic 8: Site Administration**
+| User Story | Screenshot |
+| --- | --- |
+| As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary. | ![screenshot](documentation/testing/.png) |
+
+
   
  ## React Unit Testing
 
