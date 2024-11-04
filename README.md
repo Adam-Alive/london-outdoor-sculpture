@@ -110,64 +110,81 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 - **Home Page - Public**
     
-    - The home page displays posts... 
+    - Displays the nav bar, search bar, posts and most followed user profiles.
+    - A post comprises an image with title, artist, street, post code and borough, along with the number of likes and comments.
+    - Users can enter key words in the search bar to locate posts by title, artist, street, post code and borough, along with profile name.
+    - Clicking on a users avatar redirects to the profile page.
 
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/home-1.png)
 
 - **Home Page - Logged-in Users**
 
-    - The navbar shows the page options.
+    - Additional icons on the nav bar for Add image, Bookings, Feed, Liked and Sign out.
+    - Clicking on 'Add image' enables the user to upload an image with title, artist, street, post code and borough.
 
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/home-2.png)
 
-- **Posts Page**
+![screenshot](documentation/features/add-image.png)
 
-    - Posts.
+- **Post Page**
 
-![screenshot](documentation/features/.png)
+    -  Clicking on a post reveals a post page with
+
+![screenshot](documentation/features/post-page.png)
 
 - **Profile Page**
+
     - Profiles...
 
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/profile.png)
 
-- **Feed Page**
-    - Posts of users followed...
+- **About Page**
 
-![screenshot](documentation/features/.png)
+    - Outlines the purpose of the site with guidelines for uploading images.
 
-- **Liked Page**
-    - Liked posts...
-
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/about.png)
 
 - **Talks Page**
 
     - Talks list...
 
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/talks.png)
 
-- **My Bookings Page**
+- **Bookings Page**
 
     - Bookings...
 
-![screenshot](documentation/features/.png)
+![screenshot](documentation/features/bookings.png)
 
-- **Confirm Sign out**
+- **Feed Page**
+
+    - Posts of users followed...
+
+![screenshot](documentation/features/feed.png)
+
+- **Liked Page**
+
+    - Liked posts...
+
+![screenshot](documentation/features/liked.png)
+
+- **Sign out**
 
     - When a user signs out they are first asked to confirm this action and are then given an onscreen message confirming that they have signed out.
 
 ![screenshot](documentation/features/.png)
-![screenshot](documentation/features/.png)
 
 ### Future Features
+
 The following features would add to the user experience:
 
-- xxx
-    - yyy
+- **Email sign up**
 
-- xxx
-    - zzz
+    - Currently, only a username and password are required to sign up/sign in. Adding an email to this would enable additional verification and direct communication to users about updates and events.
+
+- **Blog**
+
+    - A blog function would allow for more user interaction, engagement and sharing of ideas.
 
 ## Tools & Technologies Used
 
