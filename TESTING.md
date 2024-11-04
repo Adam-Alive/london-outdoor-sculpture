@@ -4,17 +4,44 @@
  
 ## Code Validation
  
-### HTML TBC!!!!!!!!!!
+### HTML
  
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all HTML files.
+I used the [HTML W3C Validator](https://validator.w3.org) to validate all HTML files.
 
-### CSS TBC!!!!!!!!!!
- 
-I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate the CSS file.
- 
 - Result: Pass, no errors:
+
+ ![screenshot](documentation/images/html.png) 
+
+### CSS
  
- ![screenshot](documentation/validation/css.png) 
+I used the [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate the CSS file.
+
+An example of a test for About.module.css is shown here, with full results listed below.
+ 
+![screenshot](documentation/images/css-1.png)
+![screenshot](documentation/images/css-2.png) 
+
+ | Filename | Result |
+| --- | --- |
+|About.module.css |Pass|
+|Asset.module.css|Pass|
+|Avatar.module.css |Pass|
+| BookingCreateEditForm.module.css| Pass|
+| Bookings.module.css| Pass|
+|Bookings.module.css | Pass|
+|Button.module.css| Pass|
+|Comment.module.css | Pass|
+| CommentCreateEditForm. module.css| Pass|
+|Footer.module.css |Pass |
+|MoreDropdown.module.css |Pass |
+|NavBar.module.css |Pass |
+|NotFound.module.css | Pass|
+|Post.module.css | Pass|
+|PostCreateEditForm.module.css | |
+|PostsPage.module.css |Pass |
+|Profile.module.css | Pass|
+|SignInUpForm.module.css |Pass |
+|TalksPage.module.css | Pass|
  
 ### JSX
 

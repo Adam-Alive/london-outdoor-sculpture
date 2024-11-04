@@ -35,7 +35,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - `rgb(33, 37, 41)` used for primary text.
 - `rgb(19, 19, 19)` used for Nav Bar icons and footer text.
 - `rgb(255, 146, 84)` used for Nav Bar icons on-hover.
-- `rgb(241, 241, 241)` used for body background.
+- `rgb(255, 255, 255)` used for body background.
 - `rgb(100, 117, 100)` used for header and footer background.
 - [React Bootstrap](https://react-bootstrap.github.io/docs/components/buttons) buttons component used for colouring and functionality.
 
