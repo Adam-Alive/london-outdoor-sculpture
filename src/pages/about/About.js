@@ -47,11 +47,8 @@ const About = () => {
       </li>
     </ul>
     <p>
-      But don't worry &ndash; we know that some or all of this information may not be available.
-    </p>
-    <p>
-      The picture is the main thing!
-    </p>
+      We know that this information is not always available so don't worry &ndash; the picture is the main thing!
+    </p>    
     </Container>
   )
 }

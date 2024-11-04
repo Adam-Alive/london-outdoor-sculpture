@@ -24,8 +24,8 @@ All JSX code was passed through [ESLint](https://eslint.org/), installed in my G
  
  ![screenshot](documentation/images/eslint.png) 
 
-
 ## Browser Compatibility
+
 I've tested my deployed project on Chrome, Edge and Safari to check for compatibility issues.
  
 I tested each browser on the homepage, and then logged in to view each feature. I have provided a summary of these tests below with a screenshot of the homepage.
@@ -74,20 +74,17 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
   
  | User Story | Screenshot |
  | --- | --- |
- | As a new user, I would like to land on an informative and engaging home page so that I can learn about the club.| ![screenshot](documentation/features/home-non-member.png) |
- |  As a new user, I would like to submit my contact details so that I can register my membership. | ![screenshot](documentation/features/register.png) |
+ | As a new user, I would like to land on an informative and engaging home page so that I can learn about the club.| ![screenshot](documentation/features/.png) |
+ |  As a new user, I would like to submit my contact details so that I can register my membership. | ![screenshot](documentation/features/.png) |
  |  As a member, I would like to enter my login details so that I can access the members' area. | ![screenshot](documentation/features/login.png) |
  |  As a member, I would like to logout so that I can know my session has been closed securely. | ![screenshot](documentation/features/logout-1.png) ![screenshot](documentation/features/logout-2.png) |
- |  As a member, I would like to submit a question for display on the FAQs page.| A 'could have' not completed during this iteration. |
- |  As a member, I would like to book a practice session so that I can attend at a time that suits me. | ![screenshot](documentation/features/bookings.png) |
- |  As a member, I would like to amend or cancel a practice session so that I can change my plans. | ![screenshot](documentation/features/bookings-my-bookings.png) |
- | As a member, I would like to know if the booking time I want is available so that I can make another choice if necessary. | A 'could have' not completed during this iteration.|
- |  As a member, I would like to add images to the gallery so that I can share my curling experiences with other members. | ![screenshot](documentation/features/gallery-upload.png)  ![screenshot](documentation/features/gallery-my-pictures.png) |
- | As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages. | ![screenshot](documentation/features/admin-1.png) ![screenshot](documentation/features/admin-2.png)  |
- |  As a site administrator, I would like to know when a new member has registered so that I can email them about their membership options. | A 'won't have' not completed during this iteration. |
- |  As a site administrator, I would like to manage content on the FAQs page so that I can provide information to members.| ![screenshot](documentation/features/faqs-1.png) ![screenshot](documentation/features/faqs-2.png) ![screenshot](documentation/features/faqs-3.png)|
- |  As a site administrator, I would like to approve or delete images added to the gallery so that I can filter out any objectionable material.| ![screenshot](documentation/features/admin-gall-1.png) ![screenshot](documentation/features/admin-gall-2.png)|
- |  As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues. | ![screenshot](documentation/features/admin-net-1.png)  ![screenshot](documentation/features/admin-net-2.png)|
+ |  As a member, I would like to book a practice session so that I can attend at a time that suits me. | ![screenshot](documentation/features/.png) |
+ |  As a member, I would like to amend or cancel a practice session so that I can change my plans. | ![screenshot](documentation/features/.png) |
+ |  As a member, I would like to add images to the gallery so that I can share my curling experiences with other members. | ![screenshot](documentation/features/.png)  ![screenshot](documentation/features/.png) |
+ | As a site administrator, I would like to access the administrator panel so that I can manage the club membership and site's pages. | ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)  |
+ |  As a site administrator, I would like to manage content on the FAQs page so that I can provide information to members.| ![screenshot](documentation/features/faqs-1.png) ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)|
+ |  As a site administrator, I would like to approve or delete images added to the gallery so that I can filter out any objectionable material.| ![screenshot](documentation/features/.png) ![screenshot](documentation/features/.png)|
+ |  As a site administrator, I would like to manage content on the curling network page so that I can keep members informed of other curling venues. | ![screenshot](documentation/features/.png)  ![screenshot](documentation/features/.png)|
   
  ## Automated Testing
   
