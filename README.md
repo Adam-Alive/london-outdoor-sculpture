@@ -51,7 +51,7 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 - As a new user, I would like to create an account so that I can access all the features for signed-up users.
 - As a user, I would like to sign in so that I can access functionality for signed-in users.
-- As a user, I would like to know if I am signed-in or not so that I can sign in if I necessary.
+- As a user, I would like to know if I am signed-in or not so that I can sign in if necessary.
 - As a user, I would like to sign out so that I know my session has been closed securely.
 
 ### Epic 2: Navigation
@@ -120,23 +120,49 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 - **Home Page - Logged-in Users**
 
     - Additional icons on the nav bar for Add image, Bookings, Feed, Liked and Sign out.
-    - Clicking on 'Add image' enables the user to upload an image with title, artist, street, post code and borough.
-
+    
 ![screenshot](documentation/features/home-2.png)
+
+- **Sign in**
+
+    -  Existing user can sign in with username and password.
+
+![screenshot](documentation/features/signin.png)
+
+- **Sign up**
+
+    -  New user can sign up by creating username and password.
+
+![screenshot](documentation/features/signup.png)
+
+- **Add image**
+
+    - Clicking on 'Add image' enables a logged-in user to upload an image with title, artist, street, post code and borough.
 
 ![screenshot](documentation/features/add-image.png)
 
 - **Post Page**
 
-    -  Clicking on a post reveals a post page with
+    -  Clicking on a post reveals a post page with comments listed below and a logged-in user can add comments.
 
 ![screenshot](documentation/features/post-page.png)
 
+- **Search Bar**
+
+    -  Any user can search by keyword for user, artist, post code, borough etc.
+
+![screenshot](documentation/features/search.png)
+
+
 - **Profile Page**
 
-    - Profiles...
+    - Clicking on a profile avatar displays a summary of the user's activity and their posts.
 
 ![screenshot](documentation/features/profile.png)
+
+ - - Clicking on the three-dots icon displays edit functions for the profile owner.
+
+![screenshot](documentation/features/profile-edit.png)
 
 - **About Page**
 
@@ -146,25 +172,37 @@ I used the [W3 RGB](https://www.w3schools.com/colors/colors_rgb.asp) calculator 
 
 - **Talks Page**
 
-    - Talks list...
+    - Lists online talks available (as added by the site Administrator) and a logged-in user can book their attendance by clicking on Register.
 
 ![screenshot](documentation/features/talks.png)
 
+- **Booking Page**
+
+    - Booking form is populated with the selected talk's details and the user can add their questions and/or make suggestions for future topics.
+
+![screenshot](documentation/features/talk-register.png)
+
 - **Bookings Page**
 
-    - Bookings...
+    - Lists all bookings made by a user with edit and delete options.
 
 ![screenshot](documentation/features/bookings.png)
 
+- **Edit Bookings Page**
+
+    - User can edit their question and/or suggestions.
+
+![screenshot](documentation/features/booking-edit.png)
+
 - **Feed Page**
 
-    - Posts of users followed...
+    - Logged-in users can view posts of all users they are following.
 
 ![screenshot](documentation/features/feed.png)
 
 - **Liked Page**
 
-    - Liked posts...
+    - Logged-in users can view all posts they have liked.
 
 ![screenshot](documentation/features/liked.png)
 
