@@ -2,7 +2,7 @@ import styles from "./App.module.css";
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
 import Container from "react-bootstrap/Container";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
@@ -21,7 +21,6 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import About from "./pages/about/About";
 import NotFound from "./components/NotFound";
-
 
 function App() {
   const currentUser = useCurrentUser();
@@ -56,8 +55,10 @@ function App() {
               <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
               <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />      
-              <Route exact path="/talks/" render={() => <TalksPage />} />
-              <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />
+              <Route exact path="/talks/" render={() => <TalksPage />} />            
+              <Route exact path="/bookings/create">
+                {!currentUser ? <Redirect to="/signin" /> : <Route exact path="/bookings/create" render={() => <BookingCreateForm />} />}
+              </Route>
               <Route exact path="/bookings/" render={() => <Bookings />} />
               <Route exact path="/bookings/:id" render={() => <Bookings />} />
               <Route exact path="/bookings/:id/edit" render={() => <BookingEditForm />} />

@@ -14,8 +14,10 @@ import NoResults from "../../assets/no-results.png";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function TalksPage() {
+  const currentUser = useCurrentUser();
   const [talks, setTalks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -44,8 +46,9 @@ function TalksPage() {
       <h3>Online Talks</h3>
       <br />
       <h5>All are welcome to join our monthly online talks with guest speakers covering the many themes relating to public sculpture across London.</h5>
-      <h5>Please <Link className={styles.TalksLink} to="/signin">sign-in </Link>to register for any talk.</h5>
-        {hasLoaded ? (
+        {!currentUser ? <h5>Please <Link className={styles.TalksLink} to="/signin">sign-in </Link>to register for any talk.</h5> : 
+        ""}
+      {hasLoaded ? (
           <>
             {talks.results.length ? (
               <InfiniteScroll
