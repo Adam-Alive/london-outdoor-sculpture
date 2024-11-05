@@ -158,7 +158,15 @@ I conducted manual tests for user stories and a summary is provided below:
 | User Story | Screenshot |
 | --- | --- |
 | As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary. | ![screenshot](documentation/testing/admin-page.png) |
-  
+
+**Additional tests for Infinite Scroll**
+| Page | Screenshot |
+| --- | --- |
+| Talks. | ![screenshot](documentation/bugs/scroll-talks.png) |
+| Bookings. | ![screenshot](documentation/bugs/scroll-bookings.png) |
+| Comments. | ![screenshot](documentation/bugs/scroll-comments.png) |
+ 
+ 
  ## React Unit Testing
 
  I conducted a series of automated tests on the NavBar.js component (see: [NavBar.test.js](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/src/components/__tests__/NavBar.test.js)) and acknowledge that, in a real-world scenario, an extensive set of additional tests would be required.
