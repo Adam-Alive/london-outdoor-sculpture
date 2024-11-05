@@ -173,18 +173,21 @@ I conducted manual tests for user stories and a summary is provided below:
 
  - Result: Pass, no errors:
 
- ![screenshot](documentation/images/navbar-test.png)
- 
+ ![screenshot](documentation/images/navbar-test.png) 
  
  ## Bugs
  
- - **Issue:** 
+ - **Issue:** Issue with manifest in the console at start up:
+
+ ![screenshot](documentation/bugs/bug-2.png)
   
- - **Fix:** Research on 
+ - **Fix:** Consultatation with Code Institute's tutor support revealed that I needed to update the manifest.json file:
 
-    **Before:**
+ ![screenshot](documentation/bugs/bug-3.png)
 
-    **After:**
+ - **After fix :**
+
+ ![screenshot](documentation/bugs/bug-4.png)
 
 ## Unfixed Bugs
 
