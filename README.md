@@ -431,19 +431,14 @@ To fork this repository, follow these steps:
 
 ### Content
 
-[Adobe Stock](https://stock.adobe.com/) for the logo.
-
-
+Code Institute's 'Moments' photo-sharing walkthrough served as the initial foundation and inpsiration for this project.
 
 ### Media
 
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Free Images](https://www.freeimages.com/) | home and gallery | images | Various images of curling |
-| [Pexels](https://www.pexels.com/) | home and gallery  | images | Various images of curling  |
-| [Pixelied](https://pixelied.com/convert/jpg-converter/jpg-to-webp) | home and gallery  | images | Convert png to webp |
+[Adobe Stock](https://stock.adobe.com/) for the logo.
+
+All photos my own.
 
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, Mitko Bachvarov, for his guidance and support throughout the development of this project.
-
