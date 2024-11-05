@@ -22,7 +22,9 @@ There are two target groups:
 ## UX
 ### Initial Design and Wireframes
 
-I present here the primary wireframes for all pages on small screens with relevant samples for larger screens: : [WIREFRAMES.md](WIREFRAMES.md).
+I present here the primary wireframes: [WIREFRAMES.md](WIREFRAMES.md).
+
+Responsive design will be followed throughout the development process.
 
 ### Colour Scheme
 
