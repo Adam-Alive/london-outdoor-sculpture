@@ -144,27 +144,25 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
 **Epic 6: Comments**
 | User Story | Screenshot |
 | --- | --- |
-|  As a user, I would like to view comments by other users so that I can know what they think about posts. |![screenshot](documentation/testing/.png)  |
-|   As a user, I would like to see how long ago a comment was made so that I know how old it is. | ![screenshot](documentation/testing/.png) |
-|  As a logged-in user, I would like to comment on a post so that I can share my thoughts about its content. | ![screenshot](documentation/testing/.png) |
-|   As a logged-in user, I would like to edit any comment I have made so that I can update its content. |  ![screenshot](documentation/testing/.png)|
-|   As a logged-in user, I would like to delete any comment I have made so that I can remove it from the site. | ![screenshot](documentation/testing/.png) |
+|  As a user, I would like to view comments by other users so that I can know what they think about posts. |![screenshot](documentation/testing/comment.png)  |
+|   As a user, I would like to see how long ago a comment was made so that I know how old it is. | See above.  |
+|  As a logged-in user, I would like to comment on a post so that I can share my thoughts about its content. | ![screenshot](documentation/testing/comment-make.png) |
+|   As a logged-in user, I would like to edit any comment I have made so that I can update its content. |  ![screenshot](documentation/testing/comment-edit-2.png)|
+|   As a logged-in user, I would like to delete any comment I have made so that I can remove it from the site. | ![screenshot](documentation/testing/comment-edit-1.png) |
 
 **Epic 7: Online Talk Events**
 | User Story | Screenshot |
 | --- | --- |
-|   As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page. | ![screenshot](documentation/testing/.png) |
-|   As an administrator, I would like to edit and delete an Online Talk event so that I can amend details and remove the event if necessary. |![screenshot](documentation/testing/.png)  |
-|   As a user, I would like to view all Online Talk events so that I can browse upcoming Online Talks. | ![screenshot](documentation/testing/.png) |
-|   As a logged-in user, I would like to submit a booking for an Online Talk event so that I can learn about my areas of interest. | ![screenshot](documentation/testing/.png) |
-|   As a logged-in user, I would like to view, edit and delete my bookings for Online Talk events so that I can check and change my bookings if necessary. |  ![screenshot](documentation/testing/.png)|
+|   As an administrator, I would like to create an Online Talk event so that I can publish it on the talks page. | ![screenshot](documentation/testing/talk-1.png)  ![screenshot](documentation/testing/talk-2.png)  ![screenshot](documentation/testing/talk-3.png) |
+|   As an administrator, I would like to edit and delete an Online Talk event so that I can amend details and remove the event if necessary. |![screenshot](documentation/testing/talk-4.png)  |
+|   As a user, I would like to view all Online Talk events so that I can browse upcoming Online Talks. | ![screenshot](documentation/testing/talks.png) |
+|   As a logged-in user, I would like to submit a booking for an Online Talk event so that I can learn about my areas of interest. | ![screenshot](documentation/testing/talk-booking.png) |
+|   As a logged-in user, I would like to view, edit and delete my bookings for Online Talk events so that I can check and change my bookings if necessary. |  ![screenshot](documentation/testing/my-bookings.png)  ![screenshot](documentation/testing/edit-booking.png)|
 
 **Epic 8: Site Administration**
 | User Story | Screenshot |
 | --- | --- |
-| As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary. | ![screenshot](documentation/testing/.png) |
-
-
+| As an administrator, I would like to access the administrator panel so that I can monitor and delete posts, comments and users if necessary. | ![screenshot](documentation/testing/admin-page.png) |
   
  ## React Unit Testing
 
