@@ -170,9 +170,9 @@ I conducted manual tests for user stories and a summary is provided below:
  
  ## Bugs
  
- - **Issue:** Favicon only showing on home page.
+ - **Issue:** 
   
- - **Fix:** Research on Stack Overflow suggested I link to the favicon from the base.html using Django template language, rather than html, and this solved the problem:
+ - **Fix:** Research on 
 
     **Before:**
 
@@ -180,4 +180,16 @@ I conducted manual tests for user stories and a summary is provided below:
 
 ## Unfixed Bugs
 
-Duplicate bookings.
+ - **Duplicate bookings.**
+
+  - When making a booking, a logged-in user is able to book a talk more than once. To resolve this, I explored the use of unique_together in the Booking model in the API, based upon the logic used to prevent duplicate likes and followers in the Like and Follower models respectively. I used the booking 'owner' and 'title' as the constraint fields:
+
+ ![screenshot](documentation/bugs/booking-bug.png)
+
+ - This initially appeared to work in the development API, resulting in the expected "detail: possible duplicate" message set up in the bookings serializers:
+
+ ![screenshot](documentation/bugs/booking-bug-1.png)
+
+- However, once passed through to the front-end, the result was that only one booking was possible for one talk ie. only one user could book a particular talk and then no other users. I spent considerable time in trying to resolve this - and tried other constraint fields - but then needed to prioritise other areas of the project. This is something that I can explore in a future iteration and as part of my learning and development.
+
+
