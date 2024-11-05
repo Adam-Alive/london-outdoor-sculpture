@@ -76,12 +76,12 @@ I also used Dev Tools to test on a tablet device.
  
 I tested the responsiveness of each page and have provided a summary of these tests below with a screenshot of the homepage:
  
-| Device | Home | Notes |
+| Device | Homepage | Notes |
 | --- | --- | --- |
-| Moto(g8) mobile (own) | ![screenshot](documentation/images/phone.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/images/ipad.png) | Works as expected |
-| MacBook Air (own) | ![screenshot](documentation/images/laptop.jpg) | Works as expected |
-| HP Desktop (own) | ![screenshot](documentation/images/hp.jpg) | Works as expected |
+| Moto(g8) mobile (own) |![screenshot](documentation/images/phone.png)| Works as expected |
+| Tablet (DevTools) |![screenshot](documentation/images/ipad.png) | Works as expected |
+| MacBook Air (own) |![screenshot](documentation/images/laptop.jpg) | Works as expected |
+| HP Desktop (own) |![screenshot](documentation/images/hp.jpg) | Works as expected |
  
 ## Lighthouse Audit
  
@@ -89,8 +89,8 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
  
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Home | ![screenshot](documentation/screens/m-home.png) | ![screenshot](documentation/screens/d-home.png) |
-| Bookings | ![screenshot](documentation/screens/m-bookings.png) | ![screenshot](documentation/screens/d-bookings.png) | |
+| Home | ![screenshot](documentation/screens/m-home.png) |![screenshot](documentation/screens/d-home.png)|
+| Bookings | ![screenshot](documentation/screens/m-bookings.png) |![screenshot](documentation/screens/d-bookings.png) | |
 | FAQS | ![screenshot](documentation/screens/m-faqs.png) | ![screenshot](documentation/screens/d-faqs.png) |
 | Gallery| ![screenshot](documentation/screens/m-gallery.png) | ![screenshot](documentation/screens/d-gallery.png) |
 | Network| ![screenshot](documentation/screens/m-network.png) | ![screenshot](documentation/screens/d-network.png) |
@@ -116,30 +116,30 @@ I tested the deployed project using the Lighthouse Audit tool to check for any m
 **Epic 3: Add and Like Posts**
 | User Story | Screenshot |
 | --- | --- |
-|  As a logged-in user, I would like to create a post to share on the platform so that I can engage with other users. |  ![screenshot](documentation/testing/.png)|
-| As a logged-in user, I would like to edit my posts so that I can change or update them after their creation. |![screenshot](documentation/testing/.png)  |
-|  As a logged-in user, I would like to like/unlike a post so that I can show my appreciation of the content. | ![screenshot](documentation/testing/.png) |
-|   As a logged-in user, I would like to view all posts I have liked so that I can scroll through my favourite content. |  ![screenshot](documentation/testing/.png) |
+|  As a logged-in user, I would like to create a post to share on the platform so that I can engage with other users. |  ![screenshot](documentation/testing/add-image-1.png) ![screenshot](documentation/testing/add-image-2.png)|
+| As a logged-in user, I would like to edit my posts so that I can change or update them after their creation. |![screenshot](documentation/testing/edit-post.png)  |
+|  As a logged-in user, I would like to like/unlike a post so that I can show my appreciation of the content. | ![screenshot](documentation/testing/like.png) |
+|   As a logged-in user, I would like to view all posts I have liked so that I can scroll through my favourite content. |  ![screenshot](documentation/testing/liked.png) |
 
 **Epic 4: View Posts**
 | User Story | Screenshot |
 | --- | --- |
-|   As a user, I would like to scroll continuously through the posts on any given page so that I can view them without interruption. | ![screenshot](documentation/testing/.png)  |
-|  As a user, I would like to view the most recent posts first so that I am up to date with the latest content. | ![screenshot](documentation/testing/.png) |
-|   As a user, I would like to search for posts with keywords so that I can find posts and user profiles that most interest me. |  ![screenshot](documentation/testing/.png) |
-|  As a user, I would like to view the details of a single post so that I can learn more about it. |![screenshot](documentation/testing/.png)  |
-|  As a logged-in user, I would like to view posts filtered by users I follow so that I can keep up-to-date with their content. | ![screenshot](documentation/testing/.png) |
+|   As a user, I would like to scroll continuously through the posts on any given page so that I can view them without interruption. | ![screenshot](documentation/testing/scroll-1.png) ![screenshot](documentation/testing/scroll-2.png) |
+|  As a user, I would like to view the most recent posts first so that I am up to date with the latest content. | ![screenshot](documentation/testing/date.png) |
+|   As a user, I would like to search for posts with keywords so that I can find posts and user profiles that most interest me. |  ![screenshot](documentation/testing/search-1.png) |
+|  As a user, I would like to view the details of a single post so that I can learn more about it. |![screenshot](documentation/testing/post.png)  |
+|  As a logged-in user, I would like to view posts filtered by users I follow so that I can keep up-to-date with their content. | ![screenshot](documentation/testing/feed.png) |
 
 **Epic 5: Profiles**
 | User Story | Screenshot |
 | --- | --- |
-| As a user, I would like to view other users’ profiles so that I can see their posts and learn more about them. | ![screenshot](documentation/testing/.png) |
-| As a user, I would like to view a list of the most followed profiles so that I can see which are the most popular. |![screenshot](documentation/testing/.png)  |
-|  As a user, I would like to see all the published posts by a specific user so that I can review their post history. | ![screenshot](documentation/testing/.png) |
-|   As a logged-in user, I would like to follow/unfollow other users so that I can see and remove posts by specific users in my post feed. |  ![screenshot](documentation/testing/.png) |
-|  As a logged-in user, I would like to edit my profile so that I can keep my details up to date. |![screenshot](documentation/testing/.png)  |
-|  As a logged-in user, I would like to update my username/password so that I can make changes and keep my account secure. | ![screenshot](documentation/testing/.png) |
-|  As a user, I would like to see stats on a specific user’s profile so I can know how many posts they have made, followers they have, and how many users they are following. | ![screenshot](documentation/testing/.png) |
+| As a user, I would like to view other users’ profiles so that I can see their posts and learn more about them. | ![screenshot](documentation/testing/vila.png) |
+| As a user, I would like to view a list of the most followed profiles so that I can see which are the most popular. |![screenshot](documentation/testing/profiles.png)  |
+|  As a user, I would like to see all the published posts by a specific user so that I can review their post history. | ![screenshot](documentation/testing/vila-2.png) |
+|   As a logged-in user, I would like to follow/unfollow other users so that I can see and remove posts by specific users in my post feed. |  ![screenshot](documentation/testing/follow.png) |
+|  As a logged-in user, I would like to edit my profile so that I can keep my details up to date. |![screenshot](documentation/testing/profile-edit.png)  |
+|  As a logged-in user, I would like to update my username/password so that I can make changes and keep my account secure. | ![screenshot](documentation/testing/username.png) ![screenshot](documentation/testing/password.png) |
+|  As a user, I would like to see stats on a specific user’s profile so I can know how many posts they have made, followers they have, and how many users they are following. | ![screenshot](documentation/testing/jenna.png) |
 
 **Epic 6: Comments**
 | User Story | Screenshot |
