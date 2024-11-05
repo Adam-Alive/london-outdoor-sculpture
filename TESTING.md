@@ -87,17 +87,12 @@ I tested the responsiveness of each page and have provided a summary of these te
  
 I tested the deployed project using the Lighthouse Audit tool to check for any major issues and a summary is provided below:
  
-| Page | Mobile | Desktop |
-| --- | --- | --- |
-| Home | ![screenshot](documentation/screens/m-home.png) |![screenshot](documentation/screens/d-home.png)|
-| Bookings | ![screenshot](documentation/screens/m-bookings.png) |![screenshot](documentation/screens/d-bookings.png) | |
-| FAQS | ![screenshot](documentation/screens/m-faqs.png) | ![screenshot](documentation/screens/d-faqs.png) |
-| Gallery| ![screenshot](documentation/screens/m-gallery.png) | ![screenshot](documentation/screens/d-gallery.png) |
-| Network| ![screenshot](documentation/screens/m-network.png) | ![screenshot](documentation/screens/d-network.png) |
-| Logout | ![screenshot](documentation/screens/m-logout.png) | ![screenshot](documentation/screens/d-logout.png) |
+| Mobile | Desktop |
+| --- | --- |
+| ![screenshot](documentation/testing/lighthouse-mobile.png) | ![screenshot](documentation/testing/lighthouse-pc.png) |
 
- ## User Story Testing  
- I conducted manual tests for user stories and a summary is provided below:
+## User Story Testing  
+I conducted manual tests for user stories and a summary is provided below:
 
 **Epic 1: Authentication**
 | User Story | Screenshot |
