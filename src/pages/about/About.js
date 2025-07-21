@@ -15,7 +15,7 @@ const About = () => {
     </h5>
     <ol>
       <li>
-      All sculptures must be located in one of the <a href="https://directory.londoncouncils.gov.uk/" target="_blank" rel="noreferrer"
+      All sculptures must be located in one of the <a href="https://londoncouncils.gov.uk/london-directory" target="_blank" rel="noreferrer"
       className={styles.Borough} aria-label="A directory of London boroughs (opens in a new tab)">33 London Boroughs</a> which make up Greater London.
       </li>
       <li>
